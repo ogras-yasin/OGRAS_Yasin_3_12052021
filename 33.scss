@@ -1,0 +1,152 @@
+@import "./utils/variables";
+
+
+$shadow: black 0 0 10px -4px;
+* {box-sizing: border-box;
+}
+body{font-family: 'Roboto', sans-serif;
+        font-weight: 300;}
+
+.header{
+    text-align: center;
+    
+    // &__title{font-family: 'Shrikhand', cursive;}
+    // font-size: 2em;
+    &__town{
+    background-color: #D3D3D3;
+    box-shadow: inset 0em 0.13em 0.2em grey;
+    padding: 1em;
+    }
+    &__town__geolocalisation{
+    padding:0 1em;
+    }
+    &__menu{
+    background-color: whitesmoke;
+    padding: 3em 0;
+    }
+    &__description{
+    font-weight: bold;
+    font-size: 1.7em;
+    }
+    &__btn{
+    padding: 1em;
+    border-radius: 45px;
+    box-shadow: $shadow;
+    position: relative;
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+	font-size: 1.6em;
+	line-height: 1em;
+	text-align: center;
+	background-image: linear-gradient(to bottom, pink 11%, purple 107%);
+    }
+    
+}
+
+.nav-liste{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin: 02em;
+}
+
+.nav-liste__fonctionnement{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+.nav-liste__block{
+	display: flex;
+	position: relative;
+	align-items: center;
+    margin: 0.7rem 0;
+}
+.nav-liste__block__ordre{
+	position: absolute;
+	left: -6px;
+	right: auto;
+	padding: 0.4em ;
+	border-radius: 50%;
+	background-color: purple;
+	line-height: 80%;
+}
+
+
+.nav-liste__block__btn{
+    // border: 2px solid black;
+    border-radius: 18px;
+    padding: 1em;
+    margin: 0.2em;
+    background-color: whitesmoke;
+	width: 85vw;
+    box-shadow: $shadow;
+    
+}
+.nav-liste__block__btn__icone{
+	padding: 0 0.8em;
+}
+.nav-liste__block__btn--deguster{
+    background-color: #fec5e5;
+}
+
+
+
+// purple color
+.restaurants{
+    background:$primary-color ;
+   
+    // border-radius: 3rem;
+    
+    &__title{
+        color: chartreuse;
+        margin: auto;
+        width: 85vw;
+    }
+    &__cadre{
+    box-shadow: $shadow;
+    height: 20vh;
+    width: 85vw;
+    border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
+    margin: auto;
+    
+    
+            &__img{ 
+   
+        height: 20vh;
+        
+
+	// min-height: 150px;
+	// max-height: 225px;
+	// min-width: 300px;
+	// max-width: 450px;
+
+	background-position: center;
+	background-size: cover;
+    border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
+	background-repeat: no-repeat;
+            }
+            &__img-1{
+    background-image: url(images/restaurants/birinci.jpg);
+            }
+            &__description{
+    // background-color: $white-color;
+    background-color: blueviolet;
+    color: turquoise;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1.4em;
+    border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil-description );
+            }
+    }
+}
+
+footer{
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    color: white;
+    margin-top: 10em;
+    &__title 
+        {font-family: 'Shrikhand', cursive;}
+    
+}

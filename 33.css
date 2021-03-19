@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.header {
+  text-align: center;
+}
+.header__town {
+  background-color: #D3D3D3;
+  box-shadow: inset 0em 0.13em 0.2em grey;
+  padding: 1em;
+}
+.header__town__geolocalisation {
+  padding: 0 1em;
+}
+.header__menu {
+  background-color: whitesmoke;
+  padding: 3em 0;
+}
+.header__description {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+.header__btn {
+  padding: 1em;
+  border-radius: 45px;
+  box-shadow: black 0 0 10px -4px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  font-size: 1.6em;
+  line-height: 1em;
+  text-align: center;
+  background-image: linear-gradient(to bottom, pink 11%, purple 107%);
+}
+
+.nav-liste {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  margin: 2em;
+}
+
+.nav-liste__fonctionnement {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.nav-liste__block {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 0.7rem 0;
+}
+
+.nav-liste__block__ordre {
+  position: absolute;
+  left: -6px;
+  right: auto;
+  padding: 0.4em;
+  border-radius: 50%;
+  background-color: purple;
+  line-height: 80%;
+}
+
+.nav-liste__block__btn {
+  border-radius: 18px;
+  padding: 1em;
+  margin: 0.2em;
+  background-color: whitesmoke;
+  width: 85vw;
+  box-shadow: black 0 0 10px -4px;
+}
+
+.nav-liste__block__btn__icone {
+  padding: 0 0.8em;
+}
+
+.nav-liste__block__btn--deguster {
+  background-color: #fec5e5;
+}
+
+.restaurants {
+  background: whitesmoke;
+}
+.restaurants__title {
+  color: chartreuse;
+  margin: auto;
+  width: 85vw;
+}
+.restaurants__cadre {
+  box-shadow: black 0 0 10px -4px;
+  height: 20vh;
+  width: 85vw;
+  border-radius: 23px 23px 0 0;
+  margin: auto;
+}
+.restaurants__cadre__img {
+  height: 20vh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 23px 23px 0 0;
+  background-repeat: no-repeat;
+}
+.restaurants__cadre__img-1 {
+  background-image: url(images/restaurants/birinci.jpg);
+}
+.restaurants__cadre__description {
+  background-color: blueviolet;
+  color: turquoise;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1.4em;
+  border-radius: 0 0 23px 23px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin-top: 10em;
+}
+footer__title {
+  font-family: "Shrikhand", cursive;
+}
+
+/*# sourceMappingURL=33.css.map */
