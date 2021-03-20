@@ -1,3 +1,19 @@
+.restaurants__cadre__img-1 {
+  background-image: url(images/restaurants/birinci.jpg);
+}
+
+.restaurants__cadre__img-2 {
+  background-image: url(images/restaurants/ikinci.jpg);
+}
+
+.restaurants__cadre__img-3 {
+  background-image: url(images/restaurants/ucuncu.jpg);
+}
+
+.restaurants__cadre__img-4 {
+  background-image: url(images/restaurants/dorduncu.jpg);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -91,17 +107,20 @@ body {
 
 .restaurants {
   background: whitesmoke;
+  padding: 4em 0;
 }
 .restaurants__title {
-  color: chartreuse;
+  font-weight: bold;
+  font-size: 1.4em;
   margin: auto;
   width: 85vw;
+  padding: 1em 0;
 }
 .restaurants__cadre {
   box-shadow: black 0 0 10px -4px;
   width: 85vw;
-  border-radius: 23px 23px 0 0;
-  margin: auto;
+  border-radius: 23px;
+  margin: 2em auto;
 }
 .restaurants__cadre__img {
   height: 20vh;
@@ -110,17 +129,28 @@ body {
   border-radius: 23px 23px 0 0;
   background-repeat: no-repeat;
 }
-.restaurants__cadre__img-1 {
-  background-image: url(images/restaurants/birinci.jpg);
-}
 .restaurants__cadre__description {
-  background-color: blueviolet;
-  color: turquoise;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 1em 2em;
   justify-content: space-between;
-  padding: 0 1.4em;
   border-radius: 0 0 23px 23px;
+}
+.restaurants__cadre__description__paragraphe {
+  line-height: 0.5em;
+}
+.restaurants__cadre__description__paragraphe p:first-child {
+  font-weight: bold;
+}
+.restaurants__cadre .heart:hover .restaurants__cadre__description__coeur__vide, .restaurants__cadre .restaurants__cadre__description__coeur__rempli {
+  display: none;
+}
+.restaurants__cadre .heart:hover .restaurants__cadre__description__coeur__rempli {
+  display: inline;
+  color: purple;
+  opacity: 0.4;
 }
 
 footer {

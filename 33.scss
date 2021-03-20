@@ -1,5 +1,5 @@
 @import "./utils/variables";
-
+@import "./assets/images";
 
 $shadow: black 0 0 10px -4px;
 * {box-sizing: border-box;
@@ -98,50 +98,84 @@ body{font-family: 'Roboto', sans-serif;
 // purple color
 .restaurants{
     background:$primary-color ;
-   
+    padding: 4em 0;
     // border-radius: 3rem;
     
     &__title{
-        color: chartreuse;
+        font-weight: bold;
+        font-size: 1.4em;
         margin: auto;
         width: 85vw;
+    
+        padding:1em 0;
     }
     &__cadre{
     box-shadow: $shadow;
     
     width: 85vw;
-    border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
-    margin: auto;
-    
+    border-radius: 23px;
+    margin: 2em auto;
     
             &__img{ 
    
         height: 20vh;
-        
-
-	// min-height: 150px;
-	// max-height: 225px;
-	// min-width: 300px;
-	// max-width: 450px;
-
 	background-position: center;
 	background-size: cover;
     border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
 	background-repeat: no-repeat;
+
             }
-            &__img-1{
-    background-image: url(images/restaurants/birinci.jpg);
-            }
+            
             &__description{
-    // background-color: $white-color;
-    background-color: blueviolet;
-    color: turquoise;
+    background-color: $white-color;
+    // background-color: blueviolet;
+
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 1em 2em;
+    
     justify-content: space-between;
-    padding: 0 1.4em;
     border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil-description );
             }
+            // &__description__premier-paragraphe{
+            //     padding
+            &__description__paragraphe{
+                line-height: 0.5em;
+                // padding: 2em;
+                // margin: 6em;
+            } 
+             &__description__paragraphe p:first-child {
+                 font-weight: bold;
+             }
+
+
+
+
+
+
+
+//             &__description__coeur__vide:hover .far:before{
+//                 content:"\f004";
+//                 color: blue;
+
+//                 .lock:hover .icon-unlock,
+// .lock .icon-lock {
+//     display: none;
+// }
+// .lock:hover .icon-lock {
+//     display: inline;
+// }
+
+
+.heart:hover .restaurants__cadre__description__coeur__vide , .restaurants__cadre__description__coeur__rempli{
+    display: none;
+}
+.heart:hover .restaurants__cadre__description__coeur__rempli{
+    display: inline;
+    color:purple ;
+    opacity:0.4;
+  }
     }
 }
 
