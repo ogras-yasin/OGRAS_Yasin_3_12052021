@@ -21,6 +21,7 @@ body{font-family: 'Roboto', sans-serif;
     background-color: #D3D3D3;
     box-shadow: inset 0em 0.13em 0.2em grey;
     padding: 1em;
+    font-weight: 400;
     }
     &__town__geolocalisation{
     padding:0 1em;
@@ -75,6 +76,7 @@ body{font-family: 'Roboto', sans-serif;
 	border-radius: 50%;
 	background-color: purple;
 	line-height: 80%;
+    color: white;
 }
 
 
@@ -93,6 +95,9 @@ body{font-family: 'Roboto', sans-serif;
 }
 .nav-liste__block__btn--deguster{
     background-color: #fec5e5;
+}
+.icon-market{
+    color: purple;
 }
 
 
@@ -125,7 +130,7 @@ body{font-family: 'Roboto', sans-serif;
 	background-size: cover;
     border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
 	background-repeat: no-repeat;
-    position: relative;
+    position: relative; 
 
             }
             
