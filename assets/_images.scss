@@ -3,6 +3,14 @@
 .restaurants__cadre__img-1{
     background-image: url(images/restaurants/birinci.jpg);
             }
+            .restaurants__cadre__img__btn__nouveau{
+                position:absolute;
+                background-color: mediumaquamarine;
+                z-index: 2;
+                padding: 1em;
+                right: 0;
+                margin: 2em 2em 0 0;
+            }
 .restaurants__cadre__img-2{
     background-image: url(images/restaurants/ikinci.jpg);
 }

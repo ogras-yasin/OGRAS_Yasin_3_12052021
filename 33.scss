@@ -13,8 +13,10 @@ body{font-family: 'Roboto', sans-serif;
 .header{
     text-align: center;
     
-    // &__title{font-family: 'Shrikhand', cursive;}
-    // font-size: 2em;
+    &__title{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2em;
+    }
     &__town{
     background-color: #D3D3D3;
     box-shadow: inset 0em 0.13em 0.2em grey;
@@ -123,6 +125,7 @@ body{font-family: 'Roboto', sans-serif;
 	background-size: cover;
     border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
 	background-repeat: no-repeat;
+    position: relative;
 
             }
             
@@ -182,8 +185,20 @@ body{font-family: 'Roboto', sans-serif;
 footer{
     background-color: rgba($color: #000000, $alpha: 0.8);
     color: white;
-    margin-top: 10em;
-    &__title 
-        {font-family: 'Shrikhand', cursive;}
+    
+    & ul{
+    list-style-type: none;
+    line-height: 2em;
+    }
+    & ul i {
+        padding-right: 1em;
+    }
+    & .footer__title{ 
+        font-family: 'Shrikhand', cursive;
+        padding: 1.7em 40px 1.3em;
+        font-size: 1.7em;
+        margin: 0;
+    }
+
     
 }

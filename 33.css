@@ -2,6 +2,15 @@
   background-image: url(images/restaurants/birinci.jpg);
 }
 
+.restaurants__cadre__img__btn__nouveau {
+  position: absolute;
+  background-color: mediumaquamarine;
+  z-index: 2;
+  padding: 1em;
+  right: 0;
+  margin: 2em 2em 0 0;
+}
+
 .restaurants__cadre__img-2 {
   background-image: url(images/restaurants/ikinci.jpg);
 }
@@ -27,6 +36,10 @@ body {
 
 .header {
   text-align: center;
+}
+.header__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
 }
 .header__town {
   background-color: #D3D3D3;
@@ -128,6 +141,7 @@ body {
   background-size: cover;
   border-radius: 23px 23px 0 0;
   background-repeat: no-repeat;
+  position: relative;
 }
 .restaurants__cadre__description {
   background-color: #fff;
@@ -156,10 +170,19 @@ body {
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  margin-top: 10em;
 }
-footer__title {
+footer ul {
+  list-style-type: none;
+  line-height: 2em;
+}
+footer ul i {
+  padding-right: 1em;
+}
+footer .footer__title {
   font-family: "Shrikhand", cursive;
+  padding: 1.7em 40px 1.3em;
+  font-size: 1.7em;
+  margin: 0;
 }
 
 /*# sourceMappingURL=33.css.map */
