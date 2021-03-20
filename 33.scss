@@ -5,7 +5,10 @@ $shadow: black 0 0 10px -4px;
 * {box-sizing: border-box;
 }
 body{font-family: 'Roboto', sans-serif;
-        font-weight: 300;}
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+    }
 
 .header{
     text-align: center;
@@ -105,7 +108,7 @@ body{font-family: 'Roboto', sans-serif;
     }
     &__cadre{
     box-shadow: $shadow;
-    height: 20vh;
+    
     width: 85vw;
     border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
     margin: auto;
