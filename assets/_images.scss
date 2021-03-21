@@ -10,11 +10,13 @@
 
 }
 
+
+
 .restaurants__cadre__img__btn__nouveau{
                 @include btn-nouveau
             }
 
-.restaurants__cadre__img-1{
+.restaurants__cadre__img-1, .header__img-a-la-francaise{
     background-image: url(images/restaurants/birinci.jpg);
             }
             
@@ -29,3 +31,4 @@
 .restaurants__cadre__img-4{
     background-image: url(images/restaurants/dorduncu.jpg);
 }
+

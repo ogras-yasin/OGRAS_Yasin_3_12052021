@@ -101,13 +101,23 @@ body{font-family: 'Roboto', sans-serif;
 }
 
 
+// .restaurants a {
+//     display: block;
+// }
+a:visited{
+    color:black;
+    text-decoration:line-through ;
+    text-transform: none;
+    background-color: lightcoral;
+}
 
-// purple color
 .restaurants{
-    background:$primary-color ;
+    background:$grey-color ;
     padding: 4em 0;
     // border-radius: 3rem;
-    
+    & a{
+        display: block;
+    }
     &__title{
         font-weight: bold;
         font-size: 1.4em;
@@ -206,4 +216,64 @@ footer{
     }
 
     
+}
+
+// page 2
+// page a la francaise
+
+// .header{
+//     &__img-a-la-francaise{
+//         background-image: none;
+//     }
+// }
+
+.header__img{ 
+   
+    height: 30vh;
+background-position: center;
+background-size: cover;
+border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
+background-repeat: no-repeat;
+position: relative; 
+
+        }
+
+.menu{
+    background-color:$grey-color;
+    padding: 1em;
+    &__entrees-title{
+        margin: 2em 0;
+        // text-decoration: underline;
+        
+    }
+    &__title{
+        & > span{
+            font-size: 2em;
+            font-weight: bold;
+            // font-style: italic;
+            font-family: 'Shrikhand', cursive;
+            // (telecharger police en italique bold)
+
+        }
+        & i {
+            float: right;
+        }
+    }
+    &__entrees{
+        border-radius: 25px;
+        background-color: white;
+        padding: 0 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: $shadow;
+    }
+    &__entrees__plat{
+        font-weight: bold;
+    }
+     &__entrees__prix{
+        font-weight: bold;
+        padding: 3em 0 0 0;
+        
+    }
 }

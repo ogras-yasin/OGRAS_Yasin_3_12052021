@@ -9,7 +9,7 @@
   color: green;
 }
 
-.restaurants__cadre__img-1 {
+.restaurants__cadre__img-1, .header__img-a-la-francaise {
   background-image: url(images/restaurants/birinci.jpg);
 }
 
@@ -126,9 +126,19 @@ body {
   color: purple;
 }
 
+a:visited {
+  color: black;
+  text-decoration: line-through;
+  text-transform: none;
+  background-color: lightcoral;
+}
+
 .restaurants {
   background: whitesmoke;
   padding: 4em 0;
+}
+.restaurants a {
+  display: block;
 }
 .restaurants__title {
   font-weight: bold;
@@ -191,6 +201,47 @@ footer .footer__title {
   padding: 1.7em 40px 1.3em;
   font-size: 1.7em;
   margin: 0;
+}
+
+.header__img {
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 23px 23px 0 0;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.menu {
+  background-color: whitesmoke;
+  padding: 1em;
+}
+.menu__entrees-title {
+  margin: 2em 0;
+}
+.menu__title > span {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+}
+.menu__title i {
+  float: right;
+}
+.menu__entrees {
+  border-radius: 25px;
+  background-color: white;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: black 0 0 10px -4px;
+}
+.menu__entrees__plat {
+  font-weight: bold;
+}
+.menu__entrees__prix {
+  font-weight: bold;
+  padding: 3em 0 0 0;
 }
 
 /*# sourceMappingURL=33.css.map */
