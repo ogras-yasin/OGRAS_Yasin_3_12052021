@@ -35,17 +35,7 @@ body{font-family: 'Roboto', sans-serif;
     font-size: 1.7em;
     }
     &__btn{
-    padding: 1em;
-    border-radius: 45px;
-    box-shadow: $shadow;
-    position: relative;
-	display: inline-block;
-	vertical-align: top;
-	color: white;
-	font-size: 1.6em;
-	line-height: 1em;
-	text-align: center;
-	background-image: linear-gradient(to bottom, pink 11%, purple 107%);
+    @include btn
     }
     
 }
@@ -74,7 +64,7 @@ body{font-family: 'Roboto', sans-serif;
 	right: auto;
 	padding: 0.4em ;
 	border-radius: 50%;
-	background-color: purple;
+	background-color: $primary-color;
 	line-height: 80%;
     color: white;
 }
@@ -94,10 +84,10 @@ body{font-family: 'Roboto', sans-serif;
 	padding: 0 0.8em;
 }
 .nav-liste__block__btn--deguster{
-    background-color: #fec5e5;
+    background-color: $primary-color-opacity ;
 }
 .icon-market{
-    color: purple;
+    color: $primary-color;
 }
 
 
@@ -106,9 +96,14 @@ body{font-family: 'Roboto', sans-serif;
 // }
 a:visited{
     color:black;
-    text-decoration:line-through ;
-    text-transform: none;
-    background-color: lightcoral;
+
+}
+a{
+     text-decoration: none;
+}
+a:hover{
+    transform:scale(1.15em);
+    // transition: s;
 }
 
 .restaurants{
@@ -169,30 +164,16 @@ a:visited{
 
 
 
-
-
-
-
-//             &__description__coeur__vide:hover .far:before{
-//                 content:"\f004";
-//                 color: blue;
-
-//                 .lock:hover .icon-unlock,
-// .lock .icon-lock {
-//     display: none;
-// }
-// .lock:hover .icon-lock {
-//     display: inline;
-// }
-
-
-.heart:hover .restaurants__cadre__description__coeur__vide , .restaurants__cadre__description__coeur__rempli{
+.heart:hover .restaurants__cadre__description__coeur__vide ,
+.restaurants__cadre__description__coeur__rempli{
     display: none;
 }
 .heart:hover .restaurants__cadre__description__coeur__rempli{
     display: inline;
-    color:purple ;
-    opacity:0.4;
+    color:$primary-color;
+    // color: linear-gradient(to bottom, $secondary-color 11%, $primary-color 107%);;
+    opacity:0.8;
+    // background-image: linear-gradient(to bottom, $secondary-color 11%, $primary-color 107%);
   }
     }
 }
@@ -218,14 +199,13 @@ footer{
     
 }
 
+.footer__page2{
+    position: relative;
+    top:-2.3em;
+}
+
 // page 2
 // page a la francaise
-
-// .header{
-//     &__img-a-la-francaise{
-//         background-image: none;
-//     }
-// }
 
 .header__img{ 
    
@@ -241,15 +221,22 @@ position: relative;
 .menu{
     background-color:$grey-color;
     padding: 1em;
-    &__entrees-title{
-        margin: 2em 0;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    top: -2.3em ;
+    
+    &__title{
+        margin: 1em 0;
+        padding: 1em 0;
+        border-bottom: 2px solid $tertiaire-color;
         // text-decoration: underline;
         
     }
-    &__title{
-        & > span{
+    &__header{
+        & > div{
             font-size: 2em;
             font-weight: bold;
+            margin: 1em 0 0.7em 0;
             // font-style: italic;
             font-family: 'Shrikhand', cursive;
             // (telecharger police en italique bold)
@@ -260,13 +247,12 @@ position: relative;
         }
     }
     &__entrees{
-        border-radius: 25px;
-        background-color: white;
-        padding: 0 1em;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        box-shadow: $shadow;
+    @include menu-plat;
+    
+    }
+    &:hover .hover-show{
+        display: none;
+        
     }
     &__entrees__plat{
         font-weight: bold;
@@ -277,3 +263,14 @@ position: relative;
         
     }
 }
+
+.a-la-francaise-btn{
+    @include btn;
+    padding: 1em 3em;
+    margin: 2em auto;
+}
+.header__img-a-la-francaise{
+    border-radius: 0;
+}
+
+

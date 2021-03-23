@@ -1,10 +1,48 @@
  
 $primary-color:#9356DC  ;
+$primary-color-opacity :#9356DC33;
 $secondary-color: #FF79DA;
 $tertiaire-color: #99E2D0;
 $white-color:#fff;
 $grey-color:whitesmoke;
+$btn-gradient-color:linear-gradient(to bottom, $secondary-color 11%, $primary-color 107%);
 $border-radius-cadre:(restaurants-accueil:23px 23px 0 0,restaurants-accueil-description: 0 0 23px 23px);
 
+@mixin btn-nouveau{
+    position:absolute;
+                background-color: $tertiaire-color;
+                z-index: 2;
+                padding: 1em;
+                right: 0;
+                margin: 1em 1em 0 0;
+                font-weight: bold;
+                color: green;
 
+}
 
+@mixin menu-plat{
+    border-radius: 25px;
+        background-color: white;
+        padding: 0 1em;
+        margin: 1em 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: $shadow;
+}
+
+@mixin btn{
+    padding: 1em;
+    border-radius: 45px;
+    box-shadow: $shadow;
+    position: relative;
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+	font-size: 1.6em;
+	line-height: 1em;
+	text-align: center;
+	background-image: $btn-gradient-color;
+    display: table;
+    margin: 0 auto;
+}

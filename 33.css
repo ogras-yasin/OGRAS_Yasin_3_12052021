@@ -1,6 +1,6 @@
 .restaurants__cadre__img__btn__nouveau {
   position: absolute;
-  background-color: mediumaquamarine;
+  background-color: #99E2D0;
   z-index: 2;
   padding: 1em;
   right: 0;
@@ -71,7 +71,9 @@ body {
   font-size: 1.6em;
   line-height: 1em;
   text-align: center;
-  background-image: linear-gradient(to bottom, pink 11%, purple 107%);
+  background-image: linear-gradient(to bottom, #FF79DA 11%, #9356DC 107%);
+  display: table;
+  margin: 0 auto;
 }
 
 .nav-liste {
@@ -100,7 +102,7 @@ body {
   right: auto;
   padding: 0.4em;
   border-radius: 50%;
-  background-color: purple;
+  background-color: #9356DC;
   line-height: 80%;
   color: white;
 }
@@ -119,18 +121,23 @@ body {
 }
 
 .nav-liste__block__btn--deguster {
-  background-color: #fec5e5;
+  background-color: #9356DC33;
 }
 
 .icon-market {
-  color: purple;
+  color: #9356DC;
 }
 
 a:visited {
   color: black;
-  text-decoration: line-through;
-  text-transform: none;
-  background-color: lightcoral;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.15em);
 }
 
 .restaurants {
@@ -176,13 +183,14 @@ a:visited {
 .restaurants__cadre__description__paragraphe p:first-child {
   font-weight: bold;
 }
-.restaurants__cadre .heart:hover .restaurants__cadre__description__coeur__vide, .restaurants__cadre .restaurants__cadre__description__coeur__rempli {
+.restaurants__cadre .heart:hover .restaurants__cadre__description__coeur__vide,
+.restaurants__cadre .restaurants__cadre__description__coeur__rempli {
   display: none;
 }
 .restaurants__cadre .heart:hover .restaurants__cadre__description__coeur__rempli {
   display: inline;
-  color: purple;
-  opacity: 0.4;
+  color: #9356DC;
+  opacity: 0.8;
 }
 
 footer {
@@ -203,6 +211,11 @@ footer .footer__title {
   margin: 0;
 }
 
+.footer__page2 {
+  position: relative;
+  top: -2.3em;
+}
+
 .header__img {
   height: 30vh;
   background-position: center;
@@ -215,26 +228,36 @@ footer .footer__title {
 .menu {
   background-color: whitesmoke;
   padding: 1em;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  top: -2.3em;
 }
-.menu__entrees-title {
-  margin: 2em 0;
+.menu__title {
+  margin: 1em 0;
+  padding: 1em 0;
+  border-bottom: 2px solid #99E2D0;
 }
-.menu__title > span {
+.menu__header > div {
   font-size: 2em;
   font-weight: bold;
+  margin: 1em 0 0.7em 0;
   font-family: "Shrikhand", cursive;
 }
-.menu__title i {
+.menu__header i {
   float: right;
 }
 .menu__entrees {
   border-radius: 25px;
   background-color: white;
   padding: 0 1em;
+  margin: 1em 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   box-shadow: black 0 0 10px -4px;
+}
+.menu:hover .hover-show {
+  display: none;
 }
 .menu__entrees__plat {
   font-weight: bold;
@@ -242,6 +265,28 @@ footer .footer__title {
 .menu__entrees__prix {
   font-weight: bold;
   padding: 3em 0 0 0;
+}
+
+.a-la-francaise-btn {
+  padding: 1em;
+  border-radius: 45px;
+  box-shadow: black 0 0 10px -4px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  font-size: 1.6em;
+  line-height: 1em;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #FF79DA 11%, #9356DC 107%);
+  display: table;
+  margin: 0 auto;
+  padding: 1em 3em;
+  margin: 2em auto;
+}
+
+.header__img-a-la-francaise {
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=33.css.map */
