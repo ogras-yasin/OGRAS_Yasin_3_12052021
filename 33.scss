@@ -10,9 +10,26 @@ body{font-family: 'Roboto', sans-serif;
         padding: 0;
     }
 
+    .fa-arrow-left{
+        font-size: 1.5em;
+    }
 .header{
     text-align: center;
-    
+    &__title{
+        margin: 0 auto;
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+    }
+    &__content > i{
+        position: absolute;
+        padding: 0 2em;
+    }
     &__title{
     font-family: 'Shrikhand', cursive;
     font-size: 2em;
@@ -226,14 +243,17 @@ position: relative;
     top: -2.3em ;
     
     &__title{
-        margin: 1em 0;
-        padding: 1em 0;
-        border-bottom: 2px solid $tertiaire-color;
-        // text-decoration: underline;
-        
+     
+// .menu__title:after 
+// .menu__title:hover:after 
+// voir en dessous vers la ligne 300
+
+
     }
     &__header{
+        padding: 30px 0;
         & > div{
+            display: inline;
             font-size: 2em;
             font-weight: bold;
             margin: 1em 0 0.7em 0;
@@ -244,25 +264,28 @@ position: relative;
         }
         & i {
             float: right;
+            padding: 0 22px 0 0 
         }
     }
-    &__entrees{
+    &__liste{
     @include menu-plat;
     
     }
-    &:hover .hover-show{
+    &__liste:hover .hover-show{
         display: none;
         
     }
-    &__entrees__plat{
+    &__liste__plat{
         font-weight: bold;
     }
-     &__entrees__prix{
+     &__liste__prix{
         font-weight: bold;
         padding: 3em 0 0 0;
         
     }
 }
+
+
 
 .a-la-francaise-btn{
     @include btn;
@@ -273,4 +296,29 @@ position: relative;
     border-radius: 0;
 }
 
+// :hover underline
+
+
+.menu__title {
+    // color: red;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0 10px;
+    position: relative;
+}
+.menu__title:after {    
+    bottom: 0px;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 0%;
+    position: absolute;
+    background: $tertiaire-color;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 2.5em;
+}
+.menu__title:hover:after { 
+    width: 100%; 
+}
 

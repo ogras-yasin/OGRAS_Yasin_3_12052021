@@ -36,8 +36,26 @@ body {
   padding: 0;
 }
 
+.fa-arrow-left {
+  font-size: 1.5em;
+}
+
 .header {
   text-align: center;
+}
+.header__title {
+  margin: 0 auto;
+}
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header__content > i {
+  position: absolute;
+  padding: 0 2em;
 }
 .header__title {
   font-family: "Shrikhand", cursive;
@@ -232,12 +250,11 @@ footer .footer__title {
   position: relative;
   top: -2.3em;
 }
-.menu__title {
-  margin: 1em 0;
-  padding: 1em 0;
-  border-bottom: 2px solid #99E2D0;
+.menu__header {
+  padding: 30px 0;
 }
 .menu__header > div {
+  display: inline;
   font-size: 2em;
   font-weight: bold;
   margin: 1em 0 0.7em 0;
@@ -245,8 +262,9 @@ footer .footer__title {
 }
 .menu__header i {
   float: right;
+  padding: 0 22px 0 0;
 }
-.menu__entrees {
+.menu__liste {
   border-radius: 25px;
   background-color: white;
   padding: 0 1em;
@@ -256,13 +274,13 @@ footer .footer__title {
   justify-content: space-between;
   box-shadow: black 0 0 10px -4px;
 }
-.menu:hover .hover-show {
+.menu__liste:hover .hover-show {
   display: none;
 }
-.menu__entrees__plat {
+.menu__liste__plat {
   font-weight: bold;
 }
-.menu__entrees__prix {
+.menu__liste__prix {
   font-weight: bold;
   padding: 3em 0 0 0;
 }
@@ -287,6 +305,30 @@ footer .footer__title {
 
 .header__img-a-la-francaise {
   border-radius: 0;
+}
+
+.menu__title {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 0 10px;
+  position: relative;
+}
+
+.menu__title:after {
+  bottom: 0px;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0%;
+  position: absolute;
+  background: #99E2D0;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 2.5em;
+}
+
+.menu__title:hover:after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=33.css.map */
