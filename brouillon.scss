@@ -6,3 +6,15 @@
     display: inline;
 }
 
+
+.btn {
+    &:hover + .box {
+      transform: scale(-2);
+    }
+  }
+  span{display:inline-block;
+    background-color:yellowgreen}
+  .box {
+      transition: transform 3s ease-in-out;
+  }
+ 

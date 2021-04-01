@@ -2,13 +2,39 @@
 @import "./assets/images";
 
 $shadow: black 0 0 10px -4px;
+$darken-shadow: black 1px 8px 9px -4px;
 * {box-sizing: border-box;
 }
 body{font-family: 'Roboto', sans-serif;
         font-weight: 300;
         margin: 0;
         padding: 0;
+
     }
+
+    $prog-bar-dur: 1000ms;
+    $prog-bar-delay: 150ms;
+    $cat-delay: $prog-bar-dur + $prog-bar-delay;
+    .page-web {
+        animation: page 1000ms 150ms both;
+        z-index: 1;
+    }
+    @keyframes page{
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+        }
+    }
+
+
+
+
+
+
+
+
 
     .fa-arrow-left{
         font-size: 1.5em;
@@ -52,7 +78,16 @@ body{font-family: 'Roboto', sans-serif;
     font-size: 1.7em;
     }
     &__btn{
-    @include btn
+    @include btn;
+
+    transition: all 0.6s;
+    &:hover{
+        // color: pink;
+        background-image: $btn-gradient-color;
+        opacity: 0.9;
+        box-shadow:$darken-shadow;
+        }   
+
     }
     
 }
@@ -249,6 +284,7 @@ position: relative;
 // voir en dessous vers la ligne 300
 
 
+
     }
     &__header{
         padding: 30px 0;
@@ -269,11 +305,9 @@ position: relative;
     }
     &__liste{
     @include menu-plat;
+    position: relative;
+    cursor: pointer;
     
-    }
-    &__liste:hover .hover-show{
-        display: none;
-        
     }
     &__liste__plat{
         font-weight: bold;
@@ -285,12 +319,54 @@ position: relative;
     }
 }
 
+.menu{
+    &__liste:hover &__hover-show{
+        // transform:translate(-30px) ;
+        width:400px;
+       
+
+    }
+    &__hover-show{
+        background: lime;
+        // transform:translate(0); 
+        border-radius: 0 25px 25px 0;
+        transition: all 3s ;
+        width:10px;
+        position:absolute;
+        right:0;
+        bottom:0;
+        top:0;
+        overflow:hidden;
+        // transform-origin: right; 
+
+          
+    }
+    &__hover-show__logo{
+        display:flex;
+        
+        align-items:center;
+        justify-content:center;   
+        transform:rotate(0);
+    }
+    &__liste:hover &__hover-show__logo{
+        transform: rotate(360deg);
+    }
+}
 
 
 .a-la-francaise-btn{
     @include btn;
     padding: 1em 3em;
     margin: 2em auto;
+    transition: all 0.7s;
+    &:hover{
+        // color: pink;
+        background-image: $btn-gradient-color;
+        opacity: 0.9;
+        box-shadow:$darken-shadow;
+        
+        
+    }
 }
 .header__img-a-la-francaise{
     border-radius: 0;
@@ -322,3 +398,56 @@ position: relative;
     width: 100%; 
 }
 
+// spinner
+
+$spinner: salmon;
+$background: white;
+$size: 30px;
+
+html { background-color: $background; }
+
+.spinner {
+  position: absolute;
+//   top: calc(50% - #{$size / 2});
+//   left: calc(50% - #{$size / 2});
+top: 50%;
+left: 50%;
+
+  width: $size;
+  height: $size;
+  animation: spinner 0.75s linear 
+//   infinite je le met de coté
+  ;
+  animation-duration: 3000ms;
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .spinner-inner-1 {
+    background: linear-gradient(to right, rgba($spinner,0) 0%,rgba($spinner,0) 50%,$spinner 51%);
+  }
+  
+  .spinner-inner-2 {
+    background: linear-gradient(to top, rgba($background,0) 0%,$background 100%);
+  }
+  
+  .spinner-inner-3 {
+    $offset: $size * 0.1;
+    top: $offset;
+    left: $offset;
+    width: $size - ($offset * 2);
+    height: $size - ($offset * 2);
+    background: $background;
+  }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// fin spinner 
