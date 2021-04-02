@@ -70,6 +70,9 @@ body {
   position: absolute;
   padding: 0 2em;
 }
+.header__content__lien-page-accueil {
+  padding: 0 5%;
+}
 .header__title {
   font-family: "Shrikhand", cursive;
   font-size: 2em;
@@ -243,7 +246,7 @@ footer ul i {
 }
 footer .footer__title {
   font-family: "Shrikhand", cursive;
-  padding: 1.7em 40px 1.3em;
+  padding: 0.5em 40px;
   font-size: 1.7em;
   margin: 0;
 }
@@ -304,17 +307,15 @@ footer .footer__title {
 }
 
 .menu__liste:hover .menu__hover-show {
-  width: 400px;
+  width: 100px;
 }
 .menu__hover-show {
   background: lime;
   border-radius: 0 25px 25px 0;
   transition: all 3s;
   width: 10px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
+  position: relative;
+  left: 16px;
   overflow: hidden;
 }
 .menu__hover-show__logo {
@@ -379,8 +380,23 @@ footer .footer__title {
   width: 100%;
 }
 
-html {
+@keyframes page-daccueil {
+  0%, 99% {
+    left: 0;
+  }
+  100% {
+    left: 110%;
+  }
+}
+.aga {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: white;
+  z-index: 5;
+  animation: page-daccueil 3s forwards;
 }
 
 .spinner {
