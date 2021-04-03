@@ -6,7 +6,9 @@ $tertiaire-color: #99E2D0;
 $white-color:#fff;
 $grey-color:whitesmoke;
 $btn-gradient-color:linear-gradient(to bottom, $secondary-color 11%, $primary-color 107%);
+$btn-gradient-color--lighten:linear-gradient(to bottom, $secondary-color 67%, $primary-color 107%);
 $border-radius-cadre:(restaurants-accueil:23px 23px 0 0,restaurants-accueil-description: 0 0 23px 23px);
+$transition-menu-liste: all 3s;
 
 @mixin btn-nouveau{
     position:absolute;

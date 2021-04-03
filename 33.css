@@ -251,26 +251,23 @@ footer .footer__title {
   margin: 0;
 }
 
-.footer__page2 {
-  position: relative;
-  top: -2.3em;
-}
-
 .header__img {
-  height: 30vh;
+  height: 17em;
   background-position: center;
   background-size: cover;
   border-radius: 23px 23px 0 0;
   background-repeat: no-repeat;
-  position: relative;
+}
+
+body {
+  margin: 0;
 }
 
 .menu {
   background-color: whitesmoke;
   padding: 1em;
   border-radius: 50px 50px 0 0;
-  position: relative;
-  top: -2.3em;
+  margin: -50px 0 0;
 }
 .menu__header {
   padding: 30px 0;
@@ -287,6 +284,7 @@ footer .footer__title {
   padding: 0 22px 0 0;
 }
 .menu__liste {
+  position: relative;
   border-radius: 25px;
   background-color: white;
   padding: 0 1em;
@@ -295,37 +293,58 @@ footer .footer__title {
   flex-direction: row;
   justify-content: space-between;
   box-shadow: black 0 0 10px -4px;
-  position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
-.menu__liste__plat {
+.menu__liste__description {
+  width: 100%;
+  transition: all 3s;
+}
+.menu .menu__liste:hover .menu__liste__description {
+  width: 80%;
+}
+.menu__liste__description--1p {
   font-weight: bold;
+}
+.menu__liste__description__plat__bottom {
+  display: flex;
+}
+.menu__liste__description__plat--2p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: blue;
+  width: 100%;
 }
 .menu__liste__prix {
   font-weight: bold;
-  padding: 3em 0 0 0;
+  padding: 1em 0;
 }
 
 .menu__liste:hover .menu__hover-show {
-  width: 100px;
+  width: 20%;
 }
 .menu__hover-show {
   background: lime;
   border-radius: 0 25px 25px 0;
   transition: all 3s;
   width: 10px;
-  position: relative;
-  left: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
   overflow: hidden;
 }
 .menu__hover-show__logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(0);
+  color: red;
 }
 .menu__liste:hover .menu__hover-show__logo {
   transform: rotate(360deg);
+  display: flex;
+  transition: transform 2.7s;
+  padding: 33px;
+  justify-content: center;
+  color: white;
 }
 
 .a-la-francaise-btn {
@@ -347,7 +366,7 @@ footer .footer__title {
   transition: all 0.7s;
 }
 .a-la-francaise-btn:hover {
-  background-image: linear-gradient(to bottom, #FF79DA 11%, #9356DC 107%);
+  background-image: linear-gradient(to bottom, #FF79DA 67%, #9356DC 107%);
   opacity: 0.9;
   box-shadow: black 1px 8px 9px -4px;
 }
@@ -381,32 +400,29 @@ footer .footer__title {
 }
 
 @keyframes page-daccueil {
-  0%, 99% {
-    left: 0;
-  }
   100% {
-    left: 110%;
+    z-index: -3;
+    background-color: white;
   }
 }
-.aga {
+.spinner-container {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: white;
-  z-index: 5;
-  animation: page-daccueil 3s forwards;
+  background-color: #9356DC;
+  animation: page-daccueil 7s forwards;
 }
 
 .spinner {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
   width: 30px;
   height: 30px;
-  animation: spinner 0.75s linear;
-  animation-duration: 3000ms;
+  animation: spinner 3s;
+  animation-iteration-count: 4;
 }
 .spinner span {
   position: absolute;

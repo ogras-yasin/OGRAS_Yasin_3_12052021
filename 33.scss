@@ -254,32 +254,30 @@ footer{
     
 }
 
-.footer__page2{
-    position: relative;
-    top:-2.3em;
-}
+// .footer__page2{
+//     position: relative;
+//     top:-2.3em;
+// }
 
 // page 2
 // page a la francaise
 
 .header__img{ 
    
-    height: 30vh;
+    height: 17em;
 background-position: center;
 background-size: cover;
 border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
 background-repeat: no-repeat;
-position: relative; 
+
 
         }
-
+body{margin: 0;}
 .menu{
     background-color:$grey-color;
     padding: 1em;
     border-radius: 50px 50px 0 0;
-    position: relative;
-    top: -2.3em ;
-    
+    margin: -50px 0 0;
     &__title{
      
 // .menu__title:after 
@@ -307,25 +305,57 @@ position: relative;
         }
     }
     &__liste{
-    @include menu-plat;
+    // @include menu-plat;
     position: relative;
+    border-radius: 25px;
+    background-color: white;
+    padding: 0 1em;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // width: 100%;
+    box-shadow: $shadow;
     cursor: pointer;
+    overflow: hidden;
     
     }
-    &__liste__plat{
+
+    &__liste__description{
+        width: 100%; 
+        transition: $transition-menu-liste;
+    }
+    .menu__liste:hover .menu__liste__description{
+        width:80%
+    }
+    &__liste__description--1p{
         font-weight: bold;
+    }
+    &__liste__description__plat__bottom{
+        display: flex;
+    }
+    &__liste__description__plat--2p{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: blue;
+      width: 100%;
     }
      &__liste__prix{
         font-weight: bold;
-        padding: 3em 0 0 0;
-        
+        padding: 1em 0;
     }
 }
+
+
+
+
+
 
 .menu{
     &__liste:hover &__hover-show{
         // transform:translate(-30px) ;
-        width:100px;
+        width:20%;
        
 
     }
@@ -333,29 +363,38 @@ position: relative;
         background: lime;
         // transform:translate(0); 
         border-radius: 0 25px 25px 0;
-        transition: all 3s ;
+        transition: $transition-menu-liste ; 
         width:10px;
-        position:relative;
-        left: 16px;
-        // right:0;
-        // bottom:0;
-        // top:0;
+        position:absolute;
+        right: 0;
+        bottom: 0;
+        top: 0;
+   
         overflow:hidden;
         // transform-origin: right; 
-
-          
     }
     &__hover-show__logo{
-        display:flex;
+        // display:flex;
+        // transition: transform 5s;
+        // align-items:center;
+        // justify-content:center;   
+        color: red;
+       
         
-        align-items:center;
-        justify-content:center;   
-        transform:rotate(0);
     }
-    &__liste:hover &__hover-show__logo{
+    &__liste:hover &__hover-show__logo   {
         transform: rotate(360deg);
+        display:flex;
+        transition: transform 2.7s;
+        // align-items:center; il ne fonctionne pas why i dont know so i did
+        padding: 33px;
+        // mauvaise methode mais chepa pourquoi le padding ne fonctionne pas
+        // si t'arrive pas utilise keyframes
+        justify-content:center;   
+        color: white
     }
 }
+
 
 
 .a-la-francaise-btn{
@@ -365,7 +404,7 @@ position: relative;
     transition: all 0.7s;
     &:hover{
         // color: pink;
-        background-image: $btn-gradient-color;
+        background-image: $btn-gradient-color--lighten;
         opacity: 0.9;
         box-shadow:$darken-shadow;
         
@@ -411,44 +450,41 @@ $size: 30px;
 
 
 @keyframes page-daccueil{
-0%, 99% {
-    left: 0;
 
-  }
+//   99%{
+//       left: 0;
+//   }
   100% {
-    left: 110%;
+    // left: 120%;
+    // display: none;
+    z-index: -3;
+    background-color: white;
   }
 }
 
 
 
-.aga{
+.spinner-container{
     position: absolute;
     // apres fixed
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
-    z-index: 5;
-    animation: page-daccueil 3s   forwards ;
+    background-color: $primary-color;
+    // z-index: 5;
+    animation: page-daccueil 7s   forwards ;
 }
 .spinner {
   position: absolute;
-//   top: calc(50% - #{$size / 2});
-//   left: calc(50% - #{$size / 2});
-top: 50%;
-left: 50%;
+  top: calc(50% - #{$size / 2});
+  left: calc(50% - #{$size / 2});
+
 
   width: $size;
   height: $size;
-  animation: spinner 0.75s linear 
-//   infinite je le met de coté
-  ;
-  animation-duration: 3000ms;
-
-
-
+  animation: spinner 3s  ;
+  animation-iteration-count: 4 ;
 
 
   span {
@@ -456,6 +492,7 @@ left: 50%;
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    // z-index: -4;
   }
   
   .spinner-inner-1 {
