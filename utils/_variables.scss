@@ -10,6 +10,8 @@ $btn-gradient-color--lighten:linear-gradient(to bottom, $secondary-color 67%, $p
 $border-radius-cadre:(restaurants-accueil:23px 23px 0 0,restaurants-accueil-description: 0 0 23px 23px);
 $transition-menu-liste: all 3s;
 
+
+
 @mixin btn-nouveau{
     position:absolute;
                 background-color: $tertiaire-color;
@@ -48,3 +50,25 @@ $transition-menu-liste: all 3s;
     display: table;
     margin: 0 auto;
 }
+
+
+// $animation-menu-liste: nth($list: , $n: )
+@keyframes transition {
+    0%   { opacity:0; }
+    100% { opacity:1; }
+    }
+    .menu__liste:nth-child(1) {
+        opacity:0;
+        animation: transition 1s ease-in-out 2s+1s forwards;
+    }
+
+    .menu__liste:nth-child(2) {
+        opacity:0;
+        animation: transition 1s ease-in-out 2s+2s forwards;
+    }
+
+    // ya que celle du bas qui fonctionne
+    .menu__liste:nth-child(1) {
+        opacity:0;
+        animation: transition 1s ease-in-out 0.6s+0.2s forwards;
+    }

@@ -1,3 +1,26 @@
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu__liste:nth-child(1) {
+  opacity: 0;
+  animation: transition 1s ease-in-out 3s forwards;
+}
+
+.menu__liste:nth-child(2) {
+  opacity: 0;
+  animation: transition 1s ease-in-out 4s forwards;
+}
+
+.menu__liste:nth-child(1) {
+  opacity: 0;
+  animation: transition 1s ease-in-out 0.8s forwards;
+}
+
 .restaurants__cadre__img__btn__nouveau {
   position: absolute;
   background-color: #99E2D0;
@@ -29,6 +52,7 @@
   box-sizing: border-box;
 }
 
+/* phone */
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -347,6 +371,10 @@ body {
   color: white;
 }
 
+.fa-utensils {
+  margin: 0 3px;
+}
+
 .a-la-francaise-btn {
   padding: 1em;
   border-radius: 45px;
@@ -450,6 +478,51 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/*pc desktop */
+@media all and (min-width: 800px) {
+  * {
+    font-weight: bold;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu__liste {
+    width: 32%;
+  }
+
+  .header__title {
+    margin: 1em auto;
+    font-size: 3em;
+  }
+
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurants__cadre {
+    width: 40%;
+  }
+  .restaurants__title simple {
+    width: 100%;
+  }
+
+  .nav-liste {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .nav-liste__fonctionnement {
+    width: 100%;
+  }
+
+  .nav-liste__block {
+    width: 30%;
   }
 }
 

@@ -5,6 +5,11 @@ $shadow: black 0 0 10px -4px;
 $darken-shadow: black 1px 8px 9px -4px;
 * {box-sizing: border-box;}
 
+
+/* phone */
+// @media all and (max-width: 800px)
+
+
 body{font-family: 'Roboto', sans-serif;
         font-weight: 300;
         margin: 0;
@@ -395,7 +400,20 @@ body{margin: 0;}
     }
 }
 
+// @keyframes{
+// }
 
+.fa-utensils{
+    margin: 0 3px;
+}
+
+
+
+
+
+
+
+// :nth-child()
 
 .a-la-francaise-btn{
     @include btn;
@@ -515,7 +533,66 @@ $size: 30px;
 
 @keyframes spinner {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg);
+     }
 }
 
 // fin spinner 
+
+
+/*pc desktop */
+@media all and (min-width: 800px){
+    *{font-weight: bold;}
+
+    .menu-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu__liste{
+        width: 32%;
+    }
+    .header__title {
+        margin: 1em auto;
+        font-size: 3em;
+    }
+    // .header__title--desktop{
+    //     display: flex;
+
+    // }
+    // .header__town{
+    //     background-color: ;
+    // }
+    .header__town::before{
+
+    }
+
+.restaurants{
+    display: flex;
+    flex-wrap: wrap;
+        &__cadre{
+            width: 40%;
+        }
+        &__title simple {
+            width: 100%;
+        } 
+    }
+
+
+.nav-liste{
+    display: flex;
+    // justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.nav-liste__fonctionnement{
+    width: 100%;
+}
+.nav-liste__block{
+    width: 30%;
+}
+
+
+
+
+
+}   
