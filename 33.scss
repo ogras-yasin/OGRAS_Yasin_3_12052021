@@ -541,7 +541,7 @@ $size: 30px;
 
 
 /*pc desktop */
-@media all and (min-width: 800px){
+@media all and (min-width: 1050px){
     *{font-weight: bold;}
 
     .menu-container{
@@ -578,18 +578,66 @@ $size: 30px;
     }
 
 
-.nav-liste{
-    display: flex;
-    // justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.nav-liste__fonctionnement{
-    width: 100%;
-}
-.nav-liste__block{
-    width: 30%;
-}
+    .nav-liste{
+        display: flex;
+        // justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .nav-liste__fonctionnement{
+        width: 100%;
+        background-color: white;
+    }
+    .nav-liste__block{
+        width: 30%;
+        // height: 15em;
+        align-items: unset;
+    }
+    .nav-liste__block__ordre{
+        right: -6px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 2em;
+        // padding: 4em 0;
+    }
+    .nav-liste__block__btn{
+        padding: 4em 0;
+        font-size: 1.4em;
+    }
+    .header__menu{
+        // justify-content: ;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        padding: 3em 2em;
+    }
+    // .header__menu + p:nth-child(1){
+    //     color: yellowgreen;
+    // }
+    .header__btn{
+        // display: grid;
+        margin: initial;
+        align-self: right;
+       
+        align-items: center;
+        width: 50%;
+        height: 75%;
+        display: grid;
+        position:absolute;
+        right:2em;
+        letter-spacing: 5px;
+        font-size: 3em;
+        
+    }
+    .img-responsive{
+        background-image: url(images/restaurants/birinci.jpg);
+    }
+
+
+
 
 
 
