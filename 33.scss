@@ -17,6 +17,33 @@ body{font-family: 'Roboto', sans-serif;
 
     }
 
+
+    $delay-menu-animation:2s;
+// $animation-menu-liste: nth($list: , $n: )
+@keyframes transition {
+    0%   { opacity:0; }
+    100% { opacity:1; }
+    }
+    // .menu__liste:nth-child(1) {
+    //     opacity:0;
+    //     animation: transition 1s ease-in-out 2s+1s forwards;
+    // }
+
+    // .menu__liste:nth-child(2) {
+    //     opacity:0;
+    //     animation: transition 1s ease-in-out 2s+2s forwards;
+    // }
+
+    // ya que celle du bas qui fonctionne
+    .menu__liste {
+        opacity:0;
+        animation: transition 1s ease-in-out 0.6s+2s forwards;
+    }
+
+
+
+
+
     $prog-bar-dur: 1000ms;
     $prog-bar-delay: 150ms;
     $cat-delay: $prog-bar-dur + $prog-bar-delay;
@@ -33,9 +60,33 @@ body{font-family: 'Roboto', sans-serif;
         }
     }
 
-
-
-
+    .load-1 {
+        animation-delay: $delay-menu-animation + 200ms;
+    }
+    .load-2 {
+        animation-delay: $delay-menu-animation + 400ms;
+    }
+    .load-3 {
+        animation-delay: $delay-menu-animation + 600ms;
+    }
+    .load-4 {
+        animation-delay: delay-menu-animation + 800ms;
+    }
+    .load-5 {
+        animation-delay: delay-menu-animation + 1000ms;
+    }
+    .load-6{
+        animation-delay: $delay-menu-animation + 1200ms;
+    }
+    .load-7{
+        animation-delay: $delay-menu-animation + 1400ms;
+    }
+    .load-8{
+        animation-delay: $delay-menu-animation + 1600ms;
+    }
+    .load-9{
+        animation-delay: $delay-menu-animation + 1800ms;
+    }
 
 
 
@@ -554,16 +605,6 @@ $size: 30px;
     .header__title {
         margin: 1em auto;
         font-size: 3em;
-    }
-    // .header__title--desktop{
-    //     display: flex;
-
-    // }
-    // .header__town{
-    //     background-color: ;
-    // }
-    .header__town::before{
-
     }
 
 .restaurants{

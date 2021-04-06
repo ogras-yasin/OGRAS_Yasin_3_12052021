@@ -1,26 +1,3 @@
-@keyframes transition {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.menu__liste:nth-child(1) {
-  opacity: 0;
-  animation: transition 1s ease-in-out 3s forwards;
-}
-
-.menu__liste:nth-child(2) {
-  opacity: 0;
-  animation: transition 1s ease-in-out 4s forwards;
-}
-
-.menu__liste:nth-child(1) {
-  opacity: 0;
-  animation: transition 1s ease-in-out 0.8s forwards;
-}
-
 .restaurants__cadre__img__btn__nouveau {
   position: absolute;
   background-color: #99E2D0;
@@ -60,6 +37,19 @@ body {
   padding: 0;
 }
 
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu__liste {
+  opacity: 0;
+  animation: transition 1s ease-in-out 2.6s forwards;
+}
+
 .page-web {
   animation: page 1000ms 150ms both;
   z-index: 1;
@@ -73,6 +63,42 @@ body {
     transform: translateX(0);
   }
 }
+.load-1 {
+  animation-delay: 2.2s;
+}
+
+.load-2 {
+  animation-delay: 2.4s;
+}
+
+.load-3 {
+  animation-delay: 2.6s;
+}
+
+.load-4 {
+  animation-delay: delay-menu-animation800ms;
+}
+
+.load-5 {
+  animation-delay: delay-menu-animation1000ms;
+}
+
+.load-6 {
+  animation-delay: 3.2s;
+}
+
+.load-7 {
+  animation-delay: 3.4s;
+}
+
+.load-8 {
+  animation-delay: 3.6s;
+}
+
+.load-9 {
+  animation-delay: 3.8s;
+}
+
 .fa-arrow-left {
   font-size: 1.5em;
 }

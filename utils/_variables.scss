@@ -52,23 +52,3 @@ $transition-menu-liste: all 3s;
 }
 
 
-// $animation-menu-liste: nth($list: , $n: )
-@keyframes transition {
-    0%   { opacity:0; }
-    100% { opacity:1; }
-    }
-    .menu__liste:nth-child(1) {
-        opacity:0;
-        animation: transition 1s ease-in-out 2s+1s forwards;
-    }
-
-    .menu__liste:nth-child(2) {
-        opacity:0;
-        animation: transition 1s ease-in-out 2s+2s forwards;
-    }
-
-    // ya que celle du bas qui fonctionne
-    .menu__liste:nth-child(1) {
-        opacity:0;
-        animation: transition 1s ease-in-out 0.6s+0.2s forwards;
-    }
