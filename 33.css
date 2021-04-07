@@ -204,10 +204,14 @@ body {
   background-color: whitesmoke;
   width: 85vw;
   box-shadow: black 0 0 10px -4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-liste__block__btn__icone {
   padding: 0 0.8em;
+  font-size: 2em;
 }
 
 .nav-liste__block__btn--deguster {
@@ -383,10 +387,10 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-}
-.menu__hover-show__logo {
-  color: red;
 }
 .menu__liste:hover .menu__hover-show__logo {
   transform: rotate(360deg);
@@ -576,20 +580,12 @@ body {
   }
 
   .header__btn {
-    margin: initial;
-    align-self: right;
-    align-items: center;
-    width: 50%;
-    height: 75%;
-    display: grid;
-    position: absolute;
-    right: 2em;
-    letter-spacing: 5px;
-    font-size: 3em;
+    margin: 0;
+    margin-right: 30%;
   }
 
-  .img-responsive {
-    background-image: url(images/restaurants/birinci.jpg);
+  .nav-liste__block__btn__icone {
+    padding-bottom: 10px;
   }
 }
 

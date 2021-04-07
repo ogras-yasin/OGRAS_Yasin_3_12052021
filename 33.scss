@@ -168,6 +168,7 @@ body{font-family: 'Roboto', sans-serif;
 	position: relative;
 	align-items: center;
     margin: 0.7rem 0;
+    
 }
 .nav-liste__block__ordre{
 	position: absolute;
@@ -189,10 +190,14 @@ body{font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
 	width: 85vw;
     box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 .nav-liste__block__btn__icone{
 	padding: 0 0.8em;
+    font-size: 2em;
 }
 .nav-liste__block__btn--deguster{
     background-color: $primary-color-opacity ;
@@ -425,24 +430,20 @@ body{margin: 0;}
         right: 0;
         bottom: 0;
         top: 0;
-   
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow:hidden;
         // transform-origin: right; 
     }
     &__hover-show__logo{
-        // display:flex;
-        // transition: transform 5s;
-        // align-items:center;
-        // justify-content:center;   
-        color: red;
-       
-        
+        // color: red;
     }
     &__liste:hover &__hover-show__logo   {
         transform: rotate(360deg);
         display:flex;
         transition: transform 2.7s;
-        // align-items:center; il ne fonctionne pas why i dont know so i did
         padding: 33px;
         // mauvaise methode mais chepa pourquoi le padding ne fonctionne pas
         // si t'arrive pas utilise keyframes
@@ -451,9 +452,6 @@ body{margin: 0;}
     }
 }
 
-// @keyframes{
-// }
-
 .fa-utensils{
     margin: 0 3px;
 }
@@ -461,10 +459,6 @@ body{margin: 0;}
 
 
 
-
-
-
-// :nth-child()
 
 .a-la-francaise-btn{
     @include btn;
@@ -640,7 +634,7 @@ $size: 30px;
         border-radius: 10px;
         text-align: center;
         font-size: 2em;
-        // padding: 4em 0;
+    
     }
     .nav-liste__block__btn{
         padding: 4em 0;
@@ -655,27 +649,29 @@ $size: 30px;
         position: relative;
         padding: 3em 2em;
     }
-    // .header__menu + p:nth-child(1){
-    //     color: yellowgreen;
-    // }
+  
     .header__btn{
-        // display: grid;
-        margin: initial;
-        align-self: right;
+     margin: 0;
+     margin-right: 30%;
+       }   
+    .nav-liste__block__btn__icone{
+        padding-bottom: 10px;
+    }
+    //     align-self: right;
        
-        align-items: center;
-        width: 50%;
-        height: 75%;
-        display: grid;
-        position:absolute;
-        right:2em;
-        letter-spacing: 5px;
-        font-size: 3em;
+    //     align-items: center;
+    //     width: 50%;
+    //     height: 75%;
+    //     display: grid;
+    //     position:absolute;
+    //     right:2em;
+    //     letter-spacing: 5px;
+    //     font-size: 3em;
         
-    }
-    .img-responsive{
-        background-image: url(images/restaurants/birinci.jpg);
-    }
+    // }
+    // .img-responsive{
+    //     background-image: url(images/restaurants/birinci.jpg);
+    // }
 
 
 
