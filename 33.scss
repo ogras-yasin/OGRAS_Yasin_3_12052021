@@ -1,13 +1,8 @@
 @import "./utils/variables";
 @import "./assets/images";
+// @import "./pages" ;
 
-$shadow: black 0 0 10px -4px;
-$darken-shadow: black 1px 8px 9px -4px;
 * {box-sizing: border-box;}
-
-
-/* phone */
-// @media all and (max-width: 800px)
 
 
 body{font-family: 'Roboto', sans-serif;
@@ -24,17 +19,6 @@ body{font-family: 'Roboto', sans-serif;
     0%   { opacity:0; }
     100% { opacity:1; }
     }
-    // .menu__liste:nth-child(1) {
-    //     opacity:0;
-    //     animation: transition 1s ease-in-out 2s+1s forwards;
-    // }
-
-    // .menu__liste:nth-child(2) {
-    //     opacity:0;
-    //     animation: transition 1s ease-in-out 2s+2s forwards;
-    // }
-
-    // ya que celle du bas qui fonctionne
     .menu__liste {
         opacity:0;
         animation: transition 1s ease-in-out 0.6s+2s forwards;
@@ -97,9 +81,12 @@ body{font-family: 'Roboto', sans-serif;
     }
 .header{
     text-align: center;
-    &__title{
+        &__title{
         margin: 0 auto;
-    }
+        font-family: 'Shrikhand', cursive;
+        font-size: 2em;
+        }
+
     &__content{
         display: flex;
         flex-direction: row;
@@ -108,16 +95,17 @@ body{font-family: 'Roboto', sans-serif;
         position: relative;
 
     }
+    &__content::after{
+        content: "";
+        flex: 1;
+    }
+
     &__content > i{
         position: absolute;
-        padding: 0 2em;
-    }
-    &__content__lien-page-accueil{
-        padding: 0 5%;
-    }
-    &__title{
-    font-family: 'Shrikhand', cursive;
-    font-size: 2em;
+        left: 0;
+        }
+        &__content__lien-page-accueil{
+        flex: 1;
     }
     &__town{
     background-color: #D3D3D3;
@@ -141,14 +129,12 @@ body{font-family: 'Roboto', sans-serif;
 
     transition: all 0.6s;
     &:hover{
-        // color: pink;
+
         background-image: $btn-gradient-color;
         opacity: 0.9;
         box-shadow:$darken-shadow;
         }   
-
     }
-    
 }
 
 .nav-liste{
@@ -183,7 +169,6 @@ body{font-family: 'Roboto', sans-serif;
 
 
 .nav-liste__block__btn{
-    // border: 2px solid black;
     border-radius: 18px;
     padding: 1em;
     margin: 0.2em;
@@ -207,9 +192,6 @@ body{font-family: 'Roboto', sans-serif;
 }
 
 
-// .restaurants a {
-//     display: block;
-// }
 a:visited{
     color:black;
 
@@ -219,7 +201,6 @@ a{
 }
 a:hover{
     transform:scale(1.15em);
-    // transition: s;
 }
 
 .restaurants{
@@ -243,7 +224,11 @@ a:hover{
     width: 85vw;
     border-radius: 23px;
     margin: 2em auto;
-    
+        
+            &:hover {
+            box-shadow: $darken-shadow;
+            }
+            
             &__img{ 
    
         height: 20vh;
@@ -257,8 +242,6 @@ a:hover{
             
             &__description{
     background-color: $white-color;
-    // background-color: blueviolet;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -267,12 +250,8 @@ a:hover{
     justify-content: space-between;
     border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil-description );
             }
-            // &__description__premier-paragraphe{
-            //     padding
             &__description__paragraphe{
                 line-height: 0.5em;
-                // padding: 2em;
-                // margin: 6em;
             } 
              &__description__paragraphe p:first-child {
                  font-weight: bold;
@@ -287,16 +266,18 @@ a:hover{
 .heart:hover .restaurants__cadre__description__coeur__rempli{
     display: inline;
     color:$primary-color;
-    // color: linear-gradient(to bottom, $secondary-color 11%, $primary-color 107%);;
     opacity:0.8;
-    // background-image: linear-gradient(to bottom, $secondary-color 11%, $primary-color 107%);
   }
     }
 }
 
+html{
+    height: 100%;
+}
 footer{
     background-color: rgba($color: #000000, $alpha: 0.8);
     color: white;
+    margin: 0;
     
     & ul{
     list-style-type: none;
@@ -315,10 +296,6 @@ footer{
     
 }
 
-// .footer__page2{
-//     position: relative;
-//     top:-2.3em;
-// }
 
 // page 2
 // page a la francaise
@@ -341,12 +318,6 @@ body{margin: 0;}
     margin: -50px 0 0;
     &__title{
      
-// .menu__title:after 
-// .menu__title:hover:after 
-// voir en dessous vers la ligne 300
-
-
-
     }
     &__header{
         padding: 30px 0;
@@ -399,7 +370,6 @@ body{margin: 0;}
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      color: blue;
       width: 100%;
     }
      &__liste__prix{
@@ -425,7 +395,7 @@ body{margin: 0;}
         // transform:translate(0); 
         border-radius: 0 25px 25px 0;
         transition: $transition-menu-liste ; 
-        width:10px;
+        width:0px;
         position:absolute;
         right: 0;
         bottom: 0;
@@ -438,7 +408,8 @@ body{margin: 0;}
         // transform-origin: right; 
     }
     &__hover-show__logo{
-        // color: red;
+        transform: rotate(0deg);
+        color: white
     }
     &__liste:hover &__hover-show__logo   {
         transform: rotate(360deg);
@@ -448,7 +419,7 @@ body{margin: 0;}
         // mauvaise methode mais chepa pourquoi le padding ne fonctionne pas
         // si t'arrive pas utilise keyframes
         justify-content:center;   
-        color: white
+        
     }
 }
 
@@ -456,7 +427,9 @@ body{margin: 0;}
     margin: 0 3px;
 }
 
-
+.btn-commander{
+    @include btn-comander
+}
 
 
 
@@ -506,20 +479,17 @@ body{margin: 0;}
 
 // spinner
 
-$spinner: salmon;
+$spinner: $primary-color;
 $background: white;
-$size: 30px;
+$size: 90px;
 
 
 
 @keyframes page-daccueil{
 
-//   99%{
-//       left: 0;
-//   }
+
   100% {
-    // left: 120%;
-    // display: none;
+
     z-index: -3;
     background-color: white;
   }
@@ -534,7 +504,7 @@ $size: 30px;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: $primary-color;
+    background-color: white;
     // z-index: 5;
     animation: page-daccueil 7s   forwards ;
 }
@@ -543,11 +513,11 @@ $size: 30px;
   top: calc(50% - #{$size / 2});
   left: calc(50% - #{$size / 2});
 
-
+// opacity: 1;
   width: $size;
   height: $size;
   animation: spinner 3s  ;
-  animation-iteration-count: 4 ;
+  animation-iteration-count: 1 both ;
 
 
   span {
@@ -578,17 +548,30 @@ $size: 30px;
 
 @keyframes spinner {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg);
-     }
+  99% { transform: rotate(360deg);}
+    // 100%{opacity: 0;}
+     
 }
 
 // fin spinner 
 
+// tablette
+@media all and (min-width: 1000px) and (max-width:1500px) {
+    .nav-liste{
+        margin: 02em 5em;
+    }
+    
+}
 
 /*pc desktop */
-@media all and (min-width: 1050px){
+@media all and (min-width: 1500px){
     *{font-weight: bold;}
 
+    body{
+        // Si ecran trop large margin auto + width 70vw sur le body
+        width: 90vw;
+        margin: auto;
+    }
     .menu-container{
         display: flex;
         justify-content: space-between;
@@ -600,6 +583,10 @@ $size: 30px;
         margin: 1em auto;
         font-size: 3em;
     }
+    .header__btn{
+        margin: 0;
+        margin-right:70%;
+    }   
 
 .restaurants{
     display: flex;
@@ -650,34 +637,11 @@ $size: 30px;
         padding: 3em 2em;
     }
   
-    .header__btn{
-     margin: 0;
-     margin-right: 30%;
-       }   
+    
     .nav-liste__block__btn__icone{
         padding-bottom: 10px;
     }
-    //     align-self: right;
-       
-    //     align-items: center;
-    //     width: 50%;
-    //     height: 75%;
-    //     display: grid;
-    //     position:absolute;
-    //     right:2em;
-    //     letter-spacing: 5px;
-    //     font-size: 3em;
-        
-    // }
-    // .img-responsive{
-    //     background-image: url(images/restaurants/birinci.jpg);
-    // }
-
-
-
-
-
-
-
+ 
 
 }   
+
