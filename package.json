@@ -4,7 +4,7 @@
   "description": "Joe Blow's portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./33.scss:./33.css --style expanded "
+    "sass": "sass --watch ./P_03.scss:./P_03.css --style expanded "
   },
   "repository": {
     "type": "git",

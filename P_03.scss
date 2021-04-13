@@ -3,7 +3,7 @@
 // @import "./pages" ;
 
 * {box-sizing: border-box;}
-
+a {color: #000000;}
 
 body{font-family: 'Roboto', sans-serif;
         font-weight: 300;
@@ -438,6 +438,8 @@ body{margin: 0;}
     padding: 1em 3em;
     margin: 2em auto;
     transition: all 0.7s;
+    min-width: 383px;
+    max-width: 600px;
     &:hover{
         // color: pink;
         background-image: $btn-gradient-color--lighten;
@@ -490,7 +492,7 @@ $size: 90px;
 
   100% {
 
-    z-index: -3;
+    z-index: -33;
     background-color: white;
   }
 }
@@ -565,7 +567,7 @@ $size: 90px;
 
 /*pc desktop */
 @media all and (min-width: 1500px){
-    *{font-weight: bold;}
+    
 
     body{
         // Si ecran trop large margin auto + width 70vw sur le body
@@ -576,9 +578,15 @@ $size: 90px;
         display: flex;
         justify-content: space-between;
     }
+    .menu__liste--4-row{
+        width: 23%; 
+        z-index: 2;
+    }
     .menu__liste{
         width: 32%;
+        z-index: 1;
     }
+    
     .header__title {
         margin: 1em auto;
         font-size: 3em;
