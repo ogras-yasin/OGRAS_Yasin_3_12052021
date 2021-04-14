@@ -543,14 +543,14 @@ body {
     justify-content: space-between;
   }
 
-  .menu__liste--4-row {
-    width: 23%;
-    z-index: 2;
-  }
-
   .menu__liste {
     width: 32%;
     z-index: 1;
+  }
+
+  .menu__liste--4-row {
+    width: 23%;
+    z-index: 2;
   }
 
   .header__title {

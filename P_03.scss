@@ -259,6 +259,7 @@ a:hover{
 
 
 
+
 .heart:hover .restaurants__cadre__description__coeur__vide ,
 .restaurants__cadre__description__coeur__rempli{
     display: none;
@@ -333,7 +334,8 @@ body{margin: 0;}
         }
         & i {
             float: right;
-            padding: 0 22px 0 0 
+            padding: 0 22px 0 0 ;
+            
         }
     }
     &__liste{
@@ -578,13 +580,15 @@ $size: 90px;
         display: flex;
         justify-content: space-between;
     }
-    .menu__liste--4-row{
-        width: 23%; 
-        z-index: 2;
-    }
+  
     .menu__liste{
         width: 32%;
         z-index: 1;
+    }
+
+    .menu__liste--4-row{
+        width: 23%; 
+        z-index: 2;
     }
     
     .header__title {
