@@ -215,7 +215,6 @@ body {
 .header__btn {
   border-radius: 45px;
   box-shadow: black 0 0 10px -4px;
-  display: inline-block;
   color: white;
   text-align: center;
   background-image: linear-gradient(to bottom, #FF79DA 11%, #9356DC 107%);
@@ -492,7 +491,6 @@ body {
 .a-la-francaise-btn {
   border-radius: 45px;
   box-shadow: black 0 0 10px -4px;
-  display: inline-block;
   color: white;
   text-align: center;
   background-image: linear-gradient(to bottom, #FF79DA 11%, #9356DC 107%);
@@ -500,6 +498,7 @@ body {
   padding: 1em 3em;
   margin: 2em auto;
   transition: all 0.7s;
+  width: 15em;
 }
 .a-la-francaise-btn:hover {
   background-image: linear-gradient(to bottom, #FF79DA 67%, #9356DC 107%);
