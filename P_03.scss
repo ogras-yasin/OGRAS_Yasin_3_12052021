@@ -1,9 +1,17 @@
 @import "./utils/variables";
 @import "./assets/images";
-// @import "./pages" ;
+@import "./utils/spinner" ;
+
+
 
 * {box-sizing: border-box;}
 a {color: #000000;}
+
+// * {font-weight: bold;
+//     color: blue
+//     ;}
+
+
 
 body{font-family: 'Roboto', sans-serif;
         font-weight: 300;
@@ -44,32 +52,41 @@ body{font-family: 'Roboto', sans-serif;
         }
     }
 
+// $delay-per-container: 9;
+$test: 2;
+
+.testing{
+  width: #{$test * 2};
+}
+
+
+
     .load-1 {
-        animation-delay: $delay-menu-animation + 200ms;
+        animation-delay: $delay-menu-animation + 100ms;
     }
     .load-2 {
-        animation-delay: $delay-menu-animation + 400ms;
+        animation-delay: $delay-menu-animation + 200ms;
     }
     .load-3 {
-        animation-delay: $delay-menu-animation + 600ms;
+        animation-delay: $delay-menu-animation + 300ms;
     }
     .load-4 {
-        animation-delay: delay-menu-animation + 800ms;
+        animation-delay: delay-menu-animation + 400ms;
     }
     .load-5 {
-        animation-delay: delay-menu-animation + 1000ms;
+        animation-delay: delay-menu-animation + 500ms;
     }
     .load-6{
-        animation-delay: $delay-menu-animation + 1200ms;
+        animation-delay: $delay-menu-animation + 600ms;
     }
     .load-7{
-        animation-delay: $delay-menu-animation + 1400ms;
+        animation-delay: $delay-menu-animation + 700ms;
     }
     .load-8{
-        animation-delay: $delay-menu-animation + 1600ms;
+        animation-delay: $delay-menu-animation + 800ms;
     }
     .load-9{
-        animation-delay: $delay-menu-animation + 1800ms;
+        animation-delay: $delay-menu-animation + 900ms;
     }
 
 
@@ -191,6 +208,16 @@ body{font-family: 'Roboto', sans-serif;
     color: $primary-color;
 }
 
+.header__img-page-2{
+    height: 17em;
+    background-position: center;
+    background-size: cover;
+    border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
+    background-repeat: no-repeat;
+    border-radius: 0 0 0 0;
+}
+
+// header__img-page-2
 
 a:visited{
     color:black;
@@ -219,58 +246,53 @@ a:hover{
         padding:1em 0;
     }
     &__cadre{
-    box-shadow: $shadow;
-    
-    width: 85vw;
-    border-radius: 23px;
-    margin: 2em auto;
+        box-shadow: $shadow;
         
-            &:hover {
+        width: 85vw;
+        border-radius: 23px;
+        margin: 2em auto;
+        
+        &:hover {
             box-shadow: $darken-shadow;
-            }
+        }
+        
+        &__img{ 
+            position: relative;
+            height: 17em;
+            background-position: center;
+            background-size: cover;
+            border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
+            background-repeat: no-repeat;
+        }
+        &__description{
+            background-color: $white-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 1em 2em;
             
-            &__img{ 
-   
-        height: 20vh;
-	background-position: center;
-	background-size: cover;
-    border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
-	background-repeat: no-repeat;
-    position: relative; 
-
-            }
-            
-            &__description{
-    background-color: $white-color;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1em 2em;
-    
-    justify-content: space-between;
-    border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil-description );
-            }
-            &__description__paragraphe{
-                line-height: 0.5em;
-            } 
-             &__description__paragraphe p:first-child {
-                 font-weight: bold;
-             }
-
-
-
-
-.heart:hover .restaurants__cadre__description__coeur__vide ,
-.restaurants__cadre__description__coeur__rempli{
-    display: none;
-}
-.heart:hover .restaurants__cadre__description__coeur__rempli{
-    display: inline;
-    color:$primary-color;
-    opacity:0.8;
-  }
+            justify-content: space-between;
+            border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil-description );
+        }
+        &__description__paragraphe{
+            line-height: 0.5em;
+        } 
+        &__description__paragraphe p:first-child {
+            font-weight: bold;
+        }
+        .heart:hover .restaurants__cadre__description__coeur__vide ,
+        .restaurants__cadre__description__coeur__rempli{
+            display: none;
+        }
+        .heart:hover .restaurants__cadre__description__coeur__rempli{
+        display: inline;
+        color:$primary-color;
+        opacity:0.8;
+         }
     }
+
 }
+
 
 html{
     height: 100%;
@@ -301,16 +323,10 @@ footer{
 // page 2
 // page a la francaise
 
-.header__img{ 
-   
-    height: 17em;
-background-position: center;
-background-size: cover;
-border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
-background-repeat: no-repeat;
 
 
-        }
+
+        
 body{margin: 0;}
 .menu{
     background-color:$grey-color;
@@ -393,7 +409,7 @@ body{margin: 0;}
 
     }
     &__hover-show{
-        background: lime;
+        background: $tertiaire-color;
         // transform:translate(0); 
         border-radius: 0 25px 25px 0;
         transition: $transition-menu-liste ; 
@@ -440,8 +456,8 @@ body{margin: 0;}
     padding: 1em 3em;
     margin: 2em auto;
     transition: all 0.7s;
-    min-width: 383px;
-    max-width: 600px;
+    // min-width: 383px;
+    // max-width: 600px;
     &:hover{
         // color: pink;
         background-image: $btn-gradient-color--lighten;
@@ -481,83 +497,10 @@ body{margin: 0;}
     width: 100%; 
 }
 
-// spinner
-
-$spinner: $primary-color;
-$background: white;
-$size: 90px;
-
-
-
-@keyframes page-daccueil{
-
-
-  100% {
-
-    z-index: -33;
-    background-color: white;
-  }
+footer{
+    margin-bottom: -16px;
 }
 
-
-
-.spinner-container{
-    position: absolute;
-    // apres fixed
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    // z-index: 5;
-    animation: page-daccueil 7s   forwards ;
-}
-.spinner {
-  position: absolute;
-  top: calc(50% - #{$size / 2});
-  left: calc(50% - #{$size / 2});
-
-// opacity: 1;
-  width: $size;
-  height: $size;
-  animation: spinner 3s  ;
-  animation-iteration-count: 1 both ;
-
-
-  span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    // z-index: -4;
-  }
-  
-  .spinner-inner-1 {
-    background: linear-gradient(to right, rgba($spinner,0) 0%,rgba($spinner,0) 50%,$spinner 51%);
-  }
-  
-  .spinner-inner-2 {
-    background: linear-gradient(to top, rgba($background,0) 0%,$background 100%);
-  }
-  
-  .spinner-inner-3 {
-    $offset: $size * 0.1;
-    top: $offset;
-    left: $offset;
-    width: $size - ($offset * 2);
-    height: $size - ($offset * 2);
-    background: $background;
-  }
-}
-
-@keyframes spinner {
-  0% { transform: rotate(0deg); }
-  99% { transform: rotate(360deg);}
-    // 100%{opacity: 0;}
-     
-}
-
-// fin spinner 
 
 // tablette
 @media all and (min-width: 1000px) and (max-width:1500px) {
@@ -595,10 +538,10 @@ $size: 90px;
         margin: 1em auto;
         font-size: 3em;
     }
-    .header__btn{
-        margin: 0;
-        margin-right:70%;
-    }   
+    // .header__btn{
+    //     margin: 0;
+    //     margin-right:70%;
+    // }   
 
 .restaurants{
     display: flex;
@@ -639,17 +582,6 @@ $size: 90px;
         padding: 4em 0;
         font-size: 1.4em;
     }
-    .header__menu{
-        // justify-content: ;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        position: relative;
-        padding: 3em 2em;
-    }
-  
-    
     .nav-liste__block__btn__icone{
         padding-bottom: 10px;
     }
@@ -657,3 +589,20 @@ $size: 90px;
 
 }   
 
+
+.heart:hover .az
+{
+    display: none;
+}
+
+.heart:hover .can
+{
+    display: inline;
+    color:$primary-color;
+    opacity:0.8;
+    cursor: pointer;
+  }
+.can{
+  
+    opacity: 0.0000;
+  }
