@@ -25,17 +25,28 @@ $darken-shadow: black 1px 8px 9px -4px;
 
 }
 @mixin btn-comander{
-    padding: 0.2em;
+    // padding: 0.2em;
+    // border-radius: 45px;
+    // box-shadow: $shadow;
+	// color: white;
+	// font-size: 1.6em;
+    // width: 10em;
+
+	// text-align: center;
+	// background-image: $btn-gradient-color;
+
     border-radius: 45px;
     box-shadow: $shadow;
-    // display: inline-block;
-    // padding: 0 1.3em;
+    display: inline-block;
 	color: white;
-	font-size: 1.6em;
-    width: 10em;
-
+    padding: 0 3em;
 	text-align: center;
 	background-image: $btn-gradient-color;
+    
+    padding: 1em 3em;
+    margin: 2em auto;
+    transition: all 0.7s;
+    width: 15em;
 }
 
 @mixin menu-plat{

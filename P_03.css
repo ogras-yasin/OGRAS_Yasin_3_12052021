@@ -479,14 +479,17 @@ body {
 }
 
 .btn-commander {
-  padding: 0.2em;
   border-radius: 45px;
   box-shadow: black 0 0 10px -4px;
+  display: inline-block;
   color: white;
-  font-size: 1.6em;
-  width: 10em;
+  padding: 0 3em;
   text-align: center;
   background-image: linear-gradient(to bottom, #FF79DA 11%, #9356DC 107%);
+  padding: 1em 3em;
+  margin: 2em auto;
+  transition: all 0.7s;
+  width: 15em;
 }
 
 .a-la-francaise-btn {
