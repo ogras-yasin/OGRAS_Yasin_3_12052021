@@ -142,7 +142,14 @@ $test: 2;
     font-size: 1.7em;
     }
     &__btn{
-    @include btn;
+    // @include btn;
+    border-radius: 45px;
+    box-shadow: $shadow;
+    display: inline-block;
+	color: white;
+    padding: 0 3em;
+	text-align: center;
+	background-image: $btn-gradient-color;
 
     transition: all 0.6s;
     &:hover{
