@@ -1,3 +1,8 @@
+.menu__bottom-div {
+  margin: 0 auto;
+  width: 15em;
+}
+
 .restaurants__cadre__img__btn__nouveau {
   position: absolute;
   background-color: #99E2D0;
@@ -492,7 +497,7 @@ body {
   width: 15em;
 }
 
-.a-la-francaise-btn {
+.btn-commander {
   border-radius: 45px;
   box-shadow: black 0 0 10px -4px;
   display: inline-block;
@@ -505,7 +510,7 @@ body {
   transition: all 0.7s;
   width: 15em;
 }
-.a-la-francaise-btn:hover {
+.btn-commander:hover {
   background-image: linear-gradient(to bottom, #FF79DA 67%, #9356DC 107%);
   opacity: 0.9;
   box-shadow: black 1px 8px 9px -4px;

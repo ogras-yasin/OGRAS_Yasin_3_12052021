@@ -458,11 +458,9 @@ body{margin: 0;}
 
 
 
-.a-la-francaise-btn{
+// .a-la-francaise-btn{
+    .btn-commander{
     @include btn-comander;
-    
-    // min-width: 383px;
-    // max-width: 600px;
     &:hover{
         // color: pink;
         background-image: $btn-gradient-color--lighten;

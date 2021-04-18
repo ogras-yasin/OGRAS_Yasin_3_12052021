@@ -24,16 +24,11 @@ $darken-shadow: black 1px 8px 9px -4px;
                 color: green;
 
 }
+.menu__bottom-div{
+    margin: 0 auto;
+    width: 15em;
+}
 @mixin btn-comander{
-    // padding: 0.2em;
-    // border-radius: 45px;
-    // box-shadow: $shadow;
-	// color: white;
-	// font-size: 1.6em;
-    // width: 10em;
-
-	// text-align: center;
-	// background-image: $btn-gradient-color;
 
     border-radius: 45px;
     box-shadow: $shadow;
@@ -70,7 +65,3 @@ $darken-shadow: black 1px 8px 9px -4px;
 	text-align: center;
 	background-image: $btn-gradient-color;
 }
-
-// * {font-weight: bold;
-// color: blue
-// ;}
