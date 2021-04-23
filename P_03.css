@@ -303,7 +303,7 @@ a {
 }
 
 a:hover {
-  transform: scale(1.15);
+  transform: scale(1.01);
 }
 
 .restaurants {
@@ -639,5 +639,5 @@ footer li {
 .can {
   opacity: 0;
 }
-
+ ul a {color: white;}
 /*# sourceMappingURL=P_03.css.map */

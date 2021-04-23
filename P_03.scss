@@ -7,11 +7,6 @@
 * {box-sizing: border-box;}
 a {color: #000000;}
 
-// * {font-weight: bold;
-//     color: blue
-//     ;}
-
-
 
 body{font-family: 'Roboto', sans-serif;
         font-weight: 300;
@@ -22,7 +17,7 @@ body{font-family: 'Roboto', sans-serif;
 
 
     $delay-menu-animation:2s;
-// $animation-menu-liste: nth($list: , $n: )
+
 @keyframes transition {
     0%   { opacity:0; }
     100% { opacity:1; }
@@ -228,7 +223,7 @@ a{
      text-decoration: none;
 }
 a:hover{
-    transform:scale(1.15);
+    transform:scale(1.01);
 }
 
 .restaurants{
