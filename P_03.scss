@@ -266,6 +266,7 @@ a:hover{
         &__img{ 
             position: relative;
             height: 17em;
+            max-height: 30vh;
             background-position: center;
             background-size: cover;
             border-radius: map-get($map:$border-radius-cadre , $key:restaurants-accueil );
@@ -312,6 +313,8 @@ footer{
     & ul{
     list-style-type: none;
     line-height: 2em;
+    margin: 0;
+    padding-bottom: 1em;
     }
     & ul i {
         padding-right: 1em;
@@ -403,8 +406,10 @@ body{margin: 0;}
     }
 }
 
-
-
+footer 
+li{
+    color: white;
+}
 
 
 
@@ -434,16 +439,18 @@ body{margin: 0;}
     }
     &__hover-show__logo{
         transform: rotate(0deg);
-        color: white
+        color: white;
+        font-size: 1.3rem;
+        
     }
     &__liste:hover &__hover-show__logo   {
         transform: rotate(360deg);
         display:flex;
-        transition: transform 2.7s;
+        transition: transform 1.4s;
         padding: 33px;
-        // mauvaise methode mais chepa pourquoi le padding ne fonctionne pas
-        // si t'arrive pas utilise keyframes
+        font-size: 1.4rem;
         justify-content:center;   
+
         
     }
 }
@@ -500,9 +507,6 @@ body{margin: 0;}
     width: 100%; 
 }
 
-footer{
-    margin-bottom: -16px;
-}
 
 
 // tablette
