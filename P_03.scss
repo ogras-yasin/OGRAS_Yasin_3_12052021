@@ -53,12 +53,6 @@ body{font-family: 'Roboto', sans-serif;
     }
 
 // $delay-per-container: 9;
-$test: 2;
-
-.testing{
-  width: #{$test * 2};
-}
-
 
 
     .load-1 {
@@ -155,7 +149,7 @@ $test: 2;
     &:hover{
 
         background-image: $btn-gradient-color;
-        opacity: 0.9;
+        opacity: 0.9; 
         box-shadow:$darken-shadow;
         }   
     }
@@ -234,7 +228,7 @@ a{
      text-decoration: none;
 }
 a:hover{
-    transform:scale(1.15em);
+    transform:scale(1.15);
 }
 
 .restaurants{

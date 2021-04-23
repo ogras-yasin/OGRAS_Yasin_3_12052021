@@ -130,10 +130,6 @@ body {
     transform: translateX(0);
   }
 }
-.testing {
-  width: 4;
-}
-
 .load-1 {
   animation-delay: 2.1s;
 }
@@ -307,7 +303,7 @@ a {
 }
 
 a:hover {
-  transform: scale(1.15em);
+  transform: scale(1.15);
 }
 
 .restaurants {
