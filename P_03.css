@@ -89,6 +89,47 @@
   background: white;
 }
 
+.relative {
+  position: relative;
+}
+
+input {
+  border: none;
+  background: #D3D3D3;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.relative::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99E2D0;
+  padding: 1em;
+  right: 0;
+  margin: 1em 1em 0 0;
+  font-weight: bold;
+  color: green;
+}
+
+.image-accueil {
+  height: 17em;
+  max-height: 30vh;
+  background-position: center;
+  background-size: cover;
+  border-radius: 23px 23px 0 0;
+  background-repeat: no-repeat;
+  display: inline;
+  object-fit: cover;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -143,11 +184,11 @@ body {
 }
 
 .load-4 {
-  animation-delay: delay-menu-animation400ms;
+  animation-delay: 2.4s;
 }
 
 .load-5 {
-  animation-delay: delay-menu-animation500ms;
+  animation-delay: 2.5s;
 }
 
 .load-6 {
@@ -214,6 +255,7 @@ body {
   font-size: 1.7em;
 }
 .header__btn {
+  font-size: 1.1em;
   border-radius: 45px;
   box-shadow: black 0 0 10px -4px;
   display: inline-block;
@@ -227,6 +269,23 @@ body {
   background-image: linear-gradient(to bottom, #FF79DA 11%, #9356DC 107%);
   opacity: 0.9;
   box-shadow: black 1px 8px 9px -4px;
+}
+
+.header__menu-font-weight {
+  font-weight: unset;
+}
+
+h4 {
+  font-weight: unset;
+}
+
+h6, h5 {
+  font-weight: unset;
+  margin: 1em 0;
+}
+
+h2 {
+  display: inline-block;
 }
 
 .nav-liste {
@@ -350,7 +409,7 @@ a:hover {
 .restaurants__cadre__description__paragraphe {
   line-height: 0.5em;
 }
-.restaurants__cadre__description__paragraphe p:first-child {
+.restaurants__cadre__description__paragraphe h4:first-child {
   font-weight: bold;
 }
 .restaurants__cadre .heart:hover .restaurants__cadre__description__coeur__vide,
@@ -401,8 +460,7 @@ body {
 .menu__header {
   padding: 30px 0;
 }
-.menu__header > div {
-  display: inline;
+.menu__header > h2 {
   font-size: 2em;
   font-weight: bold;
   margin: 1em 0 0.7em 0;
@@ -410,7 +468,7 @@ body {
 }
 .menu__header i {
   float: right;
-  padding: 0 22px 0 0;
+  padding: 27px 22px 0 0;
 }
 .menu__liste {
   position: relative;
@@ -434,6 +492,7 @@ body {
 }
 .menu__liste__description--1p {
   font-weight: bold;
+  font-size: 1em;
 }
 .menu__liste__description__plat__bottom {
   display: flex;
@@ -449,7 +508,14 @@ body {
   padding: 1em 0;
 }
 
+.restaurants__title {
+  display: block;
+}
+
 footer li {
+  color: white;
+}
+footer a {
   color: white;
 }
 
@@ -531,6 +597,8 @@ footer li {
   display: inline-block;
   padding: 0 0 10px;
   position: relative;
+  font-weight: unset;
+  font-size: unset;
 }
 
 .menu__title:after {
@@ -631,13 +699,15 @@ footer li {
 
 .heart:hover .can {
   display: inline;
-  color: #9356DC;
   opacity: 0.8;
   cursor: pointer;
+  background: -webkit-linear-gradient(#FF79DA 26%, #9356DC 107%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .can {
   opacity: 0;
 }
- ul a {color: white;}
+
 /*# sourceMappingURL=P_03.css.map */

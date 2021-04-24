@@ -2,6 +2,55 @@
 @import "./assets/images";
 @import "./utils/spinner" ;
 
+// .fititi{
+//     object-fit: cover;
+// }
+.relative{
+    position: relative;
+}
+input{
+    border: none;
+    background: #D3D3D3;
+    font-family: inherit;
+    font-size: 0.9em;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.relative::before{
+    content: "Nouveau";
+    // background-color: yellow;
+    // position: absolute;
+    // right: 0;
+    
+    // .restaurants__cadre__img__btn__nouveau {
+        position: absolute;
+        background-color: #99E2D0;
+        padding: 1em;
+        right: 0;
+        margin: 1em 1em 0 0;
+        font-weight: bold;
+        color: green;
+    // }
+}
+.image-accueil{
+    // .restaurants__cadre__img {
+        // position: relative;
+        height: 17em;
+        max-height: 30vh;
+        background-position: center;
+        background-size: cover;
+        border-radius: 23px 23px 0 0;
+        background-repeat: no-repeat;
+
+        display: inline;
+        object-fit: cover;
+        width: 100%;
+        // z-index: -5;
+}
 
 
 * {box-sizing: border-box;}
@@ -50,7 +99,7 @@ body{font-family: 'Roboto', sans-serif;
 // $delay-per-container: 9;
 
 
-    .load-1 {
+    .load-1 { 
         animation-delay: $delay-menu-animation + 100ms;
     }
     .load-2 {
@@ -60,10 +109,10 @@ body{font-family: 'Roboto', sans-serif;
         animation-delay: $delay-menu-animation + 300ms;
     }
     .load-4 {
-        animation-delay: delay-menu-animation + 400ms;
+        animation-delay: $delay-menu-animation + 400ms;
     }
     .load-5 {
-        animation-delay: delay-menu-animation + 500ms;
+        animation-delay: $delay-menu-animation + 500ms;
     }
     .load-6{
         animation-delay: $delay-menu-animation + 600ms;
@@ -132,6 +181,7 @@ body{font-family: 'Roboto', sans-serif;
     }
     &__btn{
     // @include btn;
+    font-size: 1.1em;
     border-radius: 45px;
     box-shadow: $shadow;
     display: inline-block;
@@ -148,6 +198,22 @@ body{font-family: 'Roboto', sans-serif;
         box-shadow:$darken-shadow;
         }   
     }
+}
+
+.header__menu-font-weight{
+    font-weight: unset;
+    // display: block;
+
+}
+h4 {
+    font-weight: unset;
+}
+h6, h5{
+    font-weight: unset;
+    margin: 1em 0;
+}
+h2{
+    display: inline-block;
 }
 
 .nav-liste{
@@ -274,7 +340,7 @@ a:hover{
         &__description__paragraphe{
             line-height: 0.5em;
         } 
-        &__description__paragraphe p:first-child {
+        &__description__paragraphe h4:first-child {
             font-weight: bold;
         }
         .heart:hover .restaurants__cadre__description__coeur__vide ,
@@ -337,8 +403,8 @@ body{margin: 0;}
     }
     &__header{
         padding: 30px 0;
-        & > div{
-            display: inline;
+        & > h2{
+            // display: inline;
             font-size: 2em;
             font-weight: bold;
             margin: 1em 0 0.7em 0;
@@ -349,8 +415,7 @@ body{margin: 0;}
         }
         & i {
             float: right;
-            padding: 0 22px 0 0 ;
-            
+            padding: 27px 22px 0 0 ;
         }
     }
     &__liste{
@@ -379,6 +444,7 @@ body{margin: 0;}
     }
     &__liste__description--1p{
         font-weight: bold;
+        font-size: 1em;
     }
     &__liste__description__plat__bottom{
         display: flex;
@@ -395,9 +461,16 @@ body{margin: 0;}
     }
 }
 
-footer 
-li{
-    color: white;
+.restaurants__title{
+    display: block;
+}
+footer{
+    li{
+        color: white;
+    }
+    a{
+        color: white;
+    }
 }
 
 
@@ -480,7 +553,10 @@ li{
     display: inline-block;
     padding: 0 0 10px;
     position: relative;
+    font-weight: unset;
+    font-size: unset;
 }
+
 .menu__title:after {    
     bottom: 0px;
     content: "";
@@ -594,9 +670,12 @@ li{
 .heart:hover .can
 {
     display: inline;
-    color:$primary-color;
+    // color:$primary-color;
     opacity:0.8;
     cursor: pointer;
+    background: -webkit-linear-gradient( $secondary-color 26%, $primary-color 107%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
 .can{
   

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,21 +21,22 @@
     <header class="header">
         <div class="header__title--desktop">
             <div class="img-responsive">
-            <p class="header__title">ohmyfood</p>
-            <div class="header__town"><i class="header__town__geolocalisation fas fa-map-marker-alt"></i>Paris Belleville</div> 
+            <h1 class="header__title">ohmyfood</h1>
+            <div class="header__town"><i class="header__town__geolocalisation fas fa-map-marker-alt"></i>
+                Paris<input class="mini-section__ville" type=text name="ville" id="ville" value="Belleville"></div> 
         </div>
         </div>  
         <div class="header__menu">
-            <p class="header__description">Réservez le menu qui vous convient</p>
+            <h2 class="header__description">Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.</p>
             <div class="header__btn">
-                 <p>Explorer nos restaurants</p>
+                 <h3 class="header__menu-font-weight">Explorer nos restaurants</h3>
             </div>
         </div>
     </header>
 <nav>
     <div class="nav-liste">
-        <span class="nav-liste__fonctionnement">Fonctionnement</span>
+        <h2 class="nav-liste__fonctionnement">Fonctionnement</h2>
             <div class="nav-liste__block">
                 <span class="nav-liste__block__ordre">1</span><span class="nav-liste__block__btn"> <i class="nav-liste__block__btn__icone fas fa-mobile-alt"></i> Choisissez un restaurant</span>
             </div>
@@ -52,13 +53,17 @@
         <h2 class="restaurants__title simple">Restaurants</h2>
 
         <a class="restaurants__cadre" href="la-palette-du-gout.html">
-            <div class="restaurants__cadre__img restaurants__cadre__img-1">
-                <div class="restaurants__cadre__img__btn__nouveau">Nouveau</div>
-            </div>
+    
+                <div class="relative">
+                    <img class="image-accueil" src="images/restaurants/birinci.jpg" alt="img-restaurant la palette du goût" />
+                </div>
+
+
+            <!-- </div> -->
             <div class="restaurants__cadre__description">
                 <div class="restaurants__cadre__description__paragraphe">
-                    <p class="restaurants__cadre__description__premier-paragraphe">La palette du goût</p>
-                    <p class="restaurants__cadre__description__dernier-paragraphe">Ménilmontant</p>
+                    <h3 class="restaurants__cadre__description__premier-paragraphe">La palette du goût</h3>
+                    <h4 class="restaurants__cadre__description__dernier-paragraphe">Ménilmontant</h4>
                 </div>
                 <span class="heart">
                     <i class="far restaurants__cadre__description__coeur__vide fa-heart fa-2x"></i>
@@ -69,13 +74,15 @@
 
        
         <a class="restaurants__cadre" href="la-note-enchantee.html">
-            <div class="restaurants__cadre__img restaurants__cadre__img-2">
-                <div class="restaurants__cadre__img__btn__nouveau">Nouveau</div>
+ 
+            <div class="relative">
+                <img  class="image-accueil" src="images/restaurants/ikinci.jpg" alt="img-restaurant la note enchantee" />
             </div>
+
             <div class="restaurants__cadre__description">
                 <div class="restaurants__cadre__description__paragraphe">
-                    <p class="restaurants__cadre__description__premier-paragraphe">La note enchantée</p>
-                    <p class="restaurants__cadre__description__dernier-paragraphe">Charonne</p>
+                    <h3 class="restaurants__cadre__description__premier-paragraphe">La note enchantée</h3>
+                    <h4 class="restaurants__cadre__description__dernier-paragraphe">Charonne</h4>
                 </div>
                 <span class="heart">
                 <i class="far restaurants__cadre__description__coeur__vide fa-heart fa-2x"></i>
@@ -85,11 +92,13 @@
         </a>
 
         <a class="restaurants__cadre" href="page-a-la-francaise.html">
-            <div class="restaurants__cadre__img restaurants__cadre__img-3"></div>
+            <!-- <div class="restaurants__cadre__img restaurants__cadre__img-3"></div> -->
+            <img  class="image-accueil" src="images/restaurants/ucuncu.jpg" alt="img-restaurant a la francaise" />
+
             <div class="restaurants__cadre__description">
                 <div class="restaurants__cadre__description__paragraphe">
-                    <p class="restaurants__cadre__description__premier-paragraphe">À la française</p>
-                    <p class="restaurants__cadre__description__dernier-paragraphe">Cité rouge</p>
+                    <h3 class="restaurants__cadre__description__premier-paragraphe">À la française</h3>
+                    <h4 class="restaurants__cadre__description__dernier-paragraphe">Cité rouge</h4>
                 </div>
                 <span class="heart">
                 <i class="far restaurants__cadre__description__coeur__vide fa-heart fa-2x"></i>
@@ -99,11 +108,14 @@
         </a>
 
         <a class="restaurants__cadre" href="Le-délice-des-sens.html">
-            <div class="restaurants__cadre__img restaurants__cadre__img-4"></div>
+            <!-- <div class="restaurants__cadre__img restaurants__cadre__img-4"></div>
+             -->
+             <img class="image-accueil" src="images/restaurants/dorduncu.jpg" alt="img-restaurant le delice des sens" />
+
             <div class="restaurants__cadre__description">
                 <div class="restaurants__cadre__description__paragraphe">
-                    <p class="restaurants__cadre__description__premier-paragraphe">Le délice des sens</p>
-                    <p class="restaurants__cadre__description__dernier-paragraphe">Folie-Méricourt</p>
+                    <h3 class="restaurants__cadre__description__premier-paragraphe">Le délice des sens</h3>
+                    <h4 class="restaurants__cadre__description__dernier-paragraphe">Folie-Méricourt</h4>
                 </div>
                 <span class="heart">
                 <i class="far restaurants__cadre__description__coeur__vide fa-heart fa-2x"></i>
@@ -119,7 +131,7 @@
     <!-- </div> -->
 </section>
 <footer>
-    <p class="footer__title">ohmyfood</p>
+    <h5 class="footer__title">ohmyfood</h5>
     <ul>
         <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
         <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
@@ -138,3 +150,4 @@
     </div> 
 </div>
     </body>
+    </html>
