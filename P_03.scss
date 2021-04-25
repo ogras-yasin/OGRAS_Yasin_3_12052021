@@ -349,12 +349,79 @@ a:hover{
         }
         .heart:hover .restaurants__cadre__description__coeur__rempli{
         display: inline;
-        color:$primary-color;
-        opacity:0.8;
+        animation: coeur 1s both alternate;
+        background: -webkit-linear-gradient( $secondary-color 100%, $primary-color 10%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
          }
+
     }
 
 }
+@keyframes coeur{
+    0% {opacity: 0;
+        }
+    100%{opacity: 1;
+    // color: blueviolet;
+    background: -webkit-linear-gradient( $secondary-color 26%, $primary-color 107%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% { 
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+// .heart:hover .restaurants__cadre__description__coeur__rempli{}
+
+// @keyframes transition {
+//     0%   { opacity:0; }
+//     100% { opacity:1; }
+//     }
+//     .menu__liste {
+//         opacity:0;
+//         animation: transition 1s ease-in-out 0.6s+2s forwards;
+//     }
+
+// <p><a class="jauge" href="#"><span class="jauge-remplissage"></span></a></p>
+.jauge {
+    width: 100px;
+    height: 200px;
+    display: block;
+    background-color: #303030;
+    position: relative;
+}
+/* Remplissage de bas en haut */
+.jauge-remplissage {
+    transition: all 0.3s linear 0s;
+    // background-color: #33BEE5;
+    background: -webkit-linear-gradient( $secondary-color 26%, $primary-color 107%);
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // top: 0;
+}
+ 
+.jauge:hover .jauge-remplissage {
+    height: 100%;
+}
+
 
 
 html{
@@ -665,12 +732,14 @@ footer{
 .heart:hover .az
 {
     display: none;
+  
 }
 
 .heart:hover .can
 {
     display: inline;
     // color:$primary-color;
+    animation: coeur 1s both ;
     opacity:0.8;
     cursor: pointer;
     background: -webkit-linear-gradient( $secondary-color 26%, $primary-color 107%);
