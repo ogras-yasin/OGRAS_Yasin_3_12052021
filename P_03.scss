@@ -478,7 +478,7 @@ body{margin: 0;}
         padding: 30px 0;
         & > h2{
             // display: inline;
-            font-size: 2em;
+            font-size: 1.2em;
             font-weight: bold;
             margin: 1em 0 0.7em 0;
             // font-style: italic;
@@ -518,14 +518,20 @@ body{margin: 0;}
     &__liste__description--1p{
         font-weight: bold;
         font-size: 1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow:ellipsis
     }
+    // &__liste__description--1p::after{
+    //     content: "1";
+    // }
     &__liste__description__plat__bottom{
         display: flex;
     }
     &__liste__description__plat--2p{
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
       width: 100%;
     }
      &__liste__prix{

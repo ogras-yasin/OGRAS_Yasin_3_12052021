@@ -512,7 +512,7 @@ body {
   padding: 30px 0;
 }
 .menu__header > h2 {
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: bold;
   margin: 1em 0 0.7em 0;
   font-family: "Shrikhand", cursive;
@@ -544,6 +544,9 @@ body {
 .menu__liste__description--1p {
   font-weight: bold;
   font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__liste__description__plat__bottom {
   display: flex;
